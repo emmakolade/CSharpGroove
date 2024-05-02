@@ -1,0 +1,15 @@
+C:\Users\Ak\Desktop\Proj\CSharpGroove\bin\Debug\net8.0\CSharpGroove.exe
+C:\Users\Ak\Desktop\Proj\CSharpGroove\bin\Debug\net8.0\CSharpGroove.deps.json
+C:\Users\Ak\Desktop\Proj\CSharpGroove\bin\Debug\net8.0\CSharpGroove.runtimeconfig.json
+C:\Users\Ak\Desktop\Proj\CSharpGroove\bin\Debug\net8.0\CSharpGroove.dll
+C:\Users\Ak\Desktop\Proj\CSharpGroove\bin\Debug\net8.0\CSharpGroove.pdb
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\CSharpGroove.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\CSharpGroove.AssemblyInfoInputs.cache
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\CSharpGroove.AssemblyInfo.cs
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\CSharpGroove.csproj.CoreCompileInputs.cache
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\CSharpGroove.sourcelink.json
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\CSharpGroove.dll
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\refint\CSharpGroove.dll
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\CSharpGroove.pdb
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\CSharpGroove.genruntimeconfig.cache
+C:\Users\Ak\Desktop\Proj\CSharpGroove\obj\Debug\net8.0\ref\CSharpGroove.dll

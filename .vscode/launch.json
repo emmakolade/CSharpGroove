@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        
+        {
+            "name": "C#: CSharpGroove",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\CSharpGroove.csproj",
+            "launchConfigurationId": "TargetFramework=;CSharpGroove"
+        }
+    ]
+}
