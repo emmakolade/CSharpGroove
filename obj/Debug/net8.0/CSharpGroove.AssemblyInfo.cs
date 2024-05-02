@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSharpGroove")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df60f4941310a4fd4cb05fbb601945c83543aeb7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45ac33509f771b559679bc994e64c75dc8d1c40f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSharpGroove")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSharpGroove")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
