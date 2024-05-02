@@ -10,9 +10,9 @@
 // Console.WriteLine(friends.StartsWith("My"));
 // Console.WriteLine(friends.Replace("Akolade","Isaac"));
 
-int a = 2100000000;
-int b = 2100000000;
+decimal a = 42.1M;
+decimal b = 38.2M;
 // long c = (long)a + (long)b;
-long c = checked(a + b);
+decimal c = a + b;
 
-Console.WriteLine(c);
+Console.WriteLine($"the answer is {c}");
