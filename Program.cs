@@ -17,17 +17,29 @@
 
 // Console.WriteLine($"the answer is {c}");
 
-int a = 5;
-int b = 3;
-int c = 4;
+// int a = 5;
+// int b = 3;
+// int c = 4;
 
-// bool myTest = c > 10;
+// // bool myTest = c > 10;
 
-if ((a + b + c > 10) || (a == b)) {
-     Console.WriteLine($"the answer is greater than 10");
-     Console.WriteLine($"and the first nuber is equal to the second number");
+// if ((a + b + c > 10) || (a == b)) {
+//      Console.WriteLine($"the answer is greater than 10");
+//      Console.WriteLine($"and the first nuber is equal to the second number");
+// }
+// else {
+//     Console.WriteLine($"the answer is lower than 10");
+//     Console.WriteLine($"the the first nuber is not equal to the second number");
+// }
+
+int counter = 10;
+// counter = counter + 1;
+do
+{
+    counter++;
+    Console.WriteLine(counter);
 }
-else {
-    Console.WriteLine($"the answer is lower than 10");
-    Console.WriteLine($"the the first nuber is not equal to the second number");
-}
+while (counter < 5);
+
+
+
