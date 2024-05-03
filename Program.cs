@@ -32,14 +32,25 @@
 //     Console.WriteLine($"the the first nuber is not equal to the second number");
 // }
 
-int counter = 10;
-// counter = counter + 1;
-do
-{
-    counter++;
-    Console.WriteLine(counter);
-}
-while (counter < 5);
+// int counter = 10;
+// // counter = counter + 1;
+// do
+// {
+//     counter++;
+//     Console.WriteLine(counter);
+// }
+// while (counter < 5);
 
+// For Loops 
+// for (int _init = 0; _init < 5; _init++){
+//     Console.WriteLine(_init);
+// }
+
+for (int row = 1; row < 11; row++) {
+    for (char col = 'a'; col < 'k'; col++){
+        Console.WriteLine($"The cell is ({row}, {col})");
+
+    }
+}
 
 
