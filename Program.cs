@@ -110,11 +110,12 @@ List<int> scores = [97, 92, 81, 60];
 
 // return;
 
-IEnumerable<int> scoreQuery= 
+IEnumerable<string> scoreQuery= 
     from score in scores
     where score > 80
-    select score;
+    orderby score ascending
+    select $"the score is {score}";
 
-foreach (int i in scoreQuery){
-    Console.WriteLine(i + " ");
+foreach (string s in scoreQuery){
+    Console.WriteLine(s + " ");
 }
