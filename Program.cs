@@ -99,13 +99,22 @@
 // LING : Language Integrated Query
 List<int> scores = [97, 92, 81, 60];
 
-for (int i = 0; i < scores.Count; i++)
-{
-    if (scores[i] > 80)
-    {
-        Console.WriteLine($"Found a score over 80 {scores[i]}");
-    }
+// for (int i = 0; i < scores.Count; i++)
+// {
+//     if (scores[i] > 80)
+//     {
+//         Console.WriteLine($"Found a score over 80 {scores[i]}");
+//     }
+// }
+
+
+// return;
+
+IEnumerable<int> scoreQuery= 
+    from score in scores
+    where score > 80
+    select score;
+
+foreach (int i in scoreQuery){
+    Console.WriteLine(i + " ");
 }
-
-
-return;
