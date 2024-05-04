@@ -80,18 +80,32 @@
 // Console.WriteLine(names[^2]);
 
 
-var numbers = new List<int>{
-  45,
-  30,
-  56,
-  87,
-  76,
-  45,
-};
-Console.WriteLine($"{numbers.IndexOf(56)}");
-numbers.Sort();
-Console.WriteLine($"{numbers.IndexOf(56)}");
-// foreach (var item in numbers)
-// {
-//     Console.WriteLine($"Hello {item}");
-// }
+// var numbers = new List<int>{
+//   45,
+//   30,
+//   56,
+//   87,
+//   76,
+//   45,
+// };
+// Console.WriteLine($"{numbers.IndexOf(56)}");
+// numbers.Sort();
+// Console.WriteLine($"{numbers.IndexOf(56)}");
+// // foreach (var item in numbers)
+// // {
+// //     Console.WriteLine($"Hello {item}");
+// // }
+
+// LING : Language Integrated Query
+List<int> scores = [97, 92, 81, 60];
+
+for (int i = 0; i < scores.Count; i++)
+{
+    if (scores[i] > 80)
+    {
+        Console.WriteLine($"Found a score over 80 {scores[i]}");
+    }
+}
+
+
+return;
