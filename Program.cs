@@ -97,7 +97,7 @@
 // // }
 
 // LING : Language Integrated Query
-List<int> scores = [97, 92, 81, 60];
+// List<int> scores = [97, 92, 81, 60];
 
 // for (int i = 0; i < scores.Count; i++)
 // {
@@ -110,12 +110,26 @@ List<int> scores = [97, 92, 81, 60];
 
 // return;
 
-IEnumerable<string> scoreQuery= 
-    from score in scores
-    where score > 80
-    orderby score ascending
-    select $"the score is {score}";
+// IEnumerable<string> scoreQuery= 
+//     from score in scores
+//     where score > 80
+//     orderby score ascending
+//     select $"the score is {score}";
 
-foreach (string s in scoreQuery){
-    Console.WriteLine(s + " ");
+// foreach (string s in scoreQuery){
+//     Console.WriteLine(s + " ");
+// }
+
+
+// OOP:
+var p1 = new MyPerson ("Akolade", "James", new DateOnly(2024,1,1));
+var p2 = new MyPerson ("Kolade", "James", new DateOnly(2024,1,1));
+List<MyPerson> people = [p1,p2];
+Console.WriteLine(people.Count);
+public class MyPerson(string first, string last, DateOnly bd)
+{
+    public string firsname = first;
+
+    public string lastname = last;
+    public DateOnly dateofbirth = bd;
 }
