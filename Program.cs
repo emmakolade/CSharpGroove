@@ -56,14 +56,14 @@
 // List<T>
 // T means Type
 
-var names = new List<string>
-{
-    "James",
-    "Akolade",
-    "Isaac",
-    "Love",
-    "Damian"
-}; 
+// var names = new List<string>
+// {
+//     "James",
+//     "Akolade",
+//     "Isaac",
+//     "Love",
+//     "Damian"
+// }; 
 //creating an object with new
 // for(int i = 0; i < names.Count; i++){
 //     Console.WriteLine($"Hello {names[i].ToUpper()}");
@@ -77,4 +77,21 @@ var names = new List<string>
 
 // Console.WriteLine(names[2]);
 // Console.WriteLine(names[1]);
-Console.WriteLine(names[^2]);
+// Console.WriteLine(names[^2]);
+
+
+var numbers = new List<int>{
+  45,
+  30,
+  56,
+  87,
+  76,
+  45,
+};
+Console.WriteLine($"{numbers.IndexOf(56)}");
+numbers.Sort();
+Console.WriteLine($"{numbers.IndexOf(56)}");
+// foreach (var item in numbers)
+// {
+//     Console.WriteLine($"Hello {item}");
+// }
