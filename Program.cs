@@ -68,7 +68,13 @@ var names = new List<string>
 // for(int i = 0; i < names.Count; i++){
 //     Console.WriteLine($"Hello {names[i].ToUpper()}");
 // }
-foreach (var people in names)
-{
-    Console.WriteLine($"Hello {people.ToUpper()}");
-}
+// foreach (var people in names)
+// {
+//     Console.WriteLine($"Hello {people.ToUpper()}");
+// }
+
+// to get the last item in the array, it is the length of the array  minus 1
+
+// Console.WriteLine(names[2]);
+// Console.WriteLine(names[1]);
+Console.WriteLine(names[^2]);
