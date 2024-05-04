@@ -46,11 +46,29 @@
 //     Console.WriteLine(_init);
 // }
 
-for (int row = 1; row < 11; row++) {
-    for (char col = 'a'; col < 'k'; col++){
-        Console.WriteLine($"The cell is ({row}, {col})");
+// for (int row = 1; row < 11; row++) {
+//     for (char col = 'a'; col < 'k'; col++){
+//         Console.WriteLine($"The cell is ({row}, {col})");
 
-    }
+//     }
+// }
+
+// List<T>
+// T means Type
+
+var names = new List<string>
+{
+    "James",
+    "Akolade",
+    "Isaac",
+    "Love",
+    "Damian"
+}; 
+//creating an object with new
+// for(int i = 0; i < names.Count; i++){
+//     Console.WriteLine($"Hello {names[i].ToUpper()}");
+// }
+foreach (var people in names)
+{
+    Console.WriteLine($"Hello {people.ToUpper()}");
 }
-
-
