@@ -122,14 +122,47 @@
 
 
 // OOP:
-var p1 = new MyPerson ("Akolade", "James", new DateOnly(2024,1,1));
-var p2 = new MyPerson ("Kolade", "James", new DateOnly(2024,1,1));
-List<MyPerson> people = [p1,p2];
-Console.WriteLine(people.Count);
+var p1 = new MyPerson("Akolade", "James", new DateOnly(2024, 1, 1));
+var p2 = new MyPerson("Kolade", "James", new DateOnly(2024, 1, 1));
+
+p1.Pets.Add(new Cat("fred"));
+p2.Pets.Add(new Cat("halley"));
+List<MyPerson> people = [p1, p2];
+
+foreach( var person in people){
+    Console.WriteLine($"{person}");
+    foreach (var pet in person.Pets){
+        Console.WriteLine($"{pet}");
+    
+    }
+}
+// Console.WriteLine(people.Count);
 public class MyPerson(string first, string last, DateOnly bd)
 {
     public string firsname = first;
 
     public string lastname = last;
     public DateOnly dateofbirth = bd;
+    public List<Pet> Pets { get; } = new();
+    public override string ToString()
+    {
+        return $"{firsname} {lastname}";
+    }
+}
+
+public abstract class Pet(string first)
+{
+    public string firsname = first;
+    public abstract string MakeNoise();
+    public override string ToString()
+    {
+        return $"{firsname} I am a {GetType().Name} and I make {MakeNoise()}";
+    }
+
+}
+public class Cat(string first) : Pet(first)
+{
+
+    public override string MakeNoise() => "meow";
+
 }
