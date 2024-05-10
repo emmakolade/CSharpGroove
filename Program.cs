@@ -171,34 +171,47 @@
 
 // store sum
 
-int sophiaSum = 0;
-int nicolasSum = 0;
-int zahirahSum = 0;
-int jeongSum = 0;
+// int sophiaSum = 0;
+// int nicolasSum = 0;
+// int zahirahSum = 0;
+// int jeongSum = 0;
 
-Console.WriteLine("Sophia: " + sophiaSum);
-Console.WriteLine("Nicolas: " + nicolasSum);
-Console.WriteLine("Zahirah: " + zahirahSum);
-Console.WriteLine("Jeong: " + jeongSum);
+// Console.WriteLine("Sophia: " + sophiaSum);
+// Console.WriteLine("Nicolas: " + nicolasSum);
+// Console.WriteLine("Zahirah: " + zahirahSum);
+// Console.WriteLine("Jeong: " + jeongSum);
 
 
-string studentName = "Sophia Johnson";
-string course1Name = "English 101";
-string course2Name = "Algebra 101";
-string course3Name = "Biology 101";
-string course4Name = "Computer Science I";
-string course5Name = "Psychology 101";
+// string studentName = "Sophia Johnson";
+// string course1Name = "English 101";
+// string course2Name = "Algebra 101";
+// string course3Name = "Biology 101";
+// string course4Name = "Computer Science I";
+// string course5Name = "Psychology 101";
 
-int gradeA = 4;
-int gradeB = 3;
-int course1Grade = gradeA;
-int course2Grade = gradeB;
-int course3Grade = gradeB;
-int course4Grade = gradeB;
-int course5Grade = gradeA;
+// int gradeA = 4;
+// int gradeB = 3;
+// int course1Grade = gradeA;
+// int course2Grade = gradeB;
+// int course3Grade = gradeB;
+// int course4Grade = gradeB;
+// int course5Grade = gradeA;
 
-Console.WriteLine($"{course1Name} {course1Grade}");
-Console.WriteLine($"{course2Name} {course2Grade}");
-Console.WriteLine($"{course3Name} {course3Grade}");
-Console.WriteLine($"{course4Name} {course4Grade}");
-Console.WriteLine($"{course5Name} {course5Grade}");
+// Console.WriteLine($"{course1Name} {course1Grade}");
+// Console.WriteLine($"{course2Name} {course2Grade}");
+// Console.WriteLine($"{course3Name} {course3Grade}");
+// Console.WriteLine($"{course4Name} {course4Grade}");
+// Console.WriteLine($"{course5Name} {course5Grade}");
+
+
+
+// .NET Class Library
+/*
+.NET library is an organized collection  
+of profgramming languge resources 
+
+*/
+
+Random dice = new Random();
+int roll = dice.Next(1, 7);
+Console.WriteLine(roll);
