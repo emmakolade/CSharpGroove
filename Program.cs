@@ -213,12 +213,19 @@ of profgramming languge resources
 */
 
 // Overload
-Random dice = new Random();
-int roll = dice.Next();
-int roll2 = dice.Next(101);
-int roll3 = dice.Next(50, 101);
+// Random dice = new Random();
+// int roll = dice.Next();
+// int roll2 = dice.Next(101);
+// int roll3 = dice.Next(50, 101);
 
-Console.WriteLine($"first roll:{roll}");
-Console.WriteLine($"second roll:{roll2}");
-Console.WriteLine($"third roll:{roll3}");
+// Console.WriteLine($"first roll:{roll}");
+// Console.WriteLine($"second roll:{roll2}");
+// Console.WriteLine($"third roll:{roll3}");
 
+//challenge
+
+int firstValue = 500;
+int secondValue = 600;
+int largerValue;
+largerValue= System.Math.Max(firstValue, secondValue);
+Console.WriteLine(largerValue);
