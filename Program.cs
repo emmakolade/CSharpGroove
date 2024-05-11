@@ -212,7 +212,13 @@ of profgramming languge resources
 
 */
 
+// Overload
 Random dice = new Random();
 int roll = dice.Next();
-Console.WriteLine(roll);
+int roll2 = dice.Next(101);
+int roll3 = dice.Next(50, 101);
+
+Console.WriteLine($"first roll:{roll}");
+Console.WriteLine($"second roll:{roll2}");
+Console.WriteLine($"third roll:{roll3}");
 
