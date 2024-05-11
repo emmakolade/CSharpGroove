@@ -213,5 +213,6 @@ of profgramming languge resources
 */
 
 Random dice = new Random();
-int roll = dice.Next(1, 7);
+int roll = dice.Next();
 Console.WriteLine(roll);
+
