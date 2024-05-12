@@ -232,29 +232,34 @@ of profgramming languge resources
 
 // code that generates three radom numbers and display in output
 
-// Random dice = new();
+Random dice = new();
 
-// int roll1 = dice.Next(1, 7);
-// int roll2 = dice.Next(1, 7);
-// int roll3 = dice.Next(1, 7);
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
 
-// int  totalRoll = roll1 + roll2 + roll3;
+int  totalRoll = roll1 + roll2 + roll3;
 
 
-// Console.WriteLine($"Total Dice roll {roll1} + {roll2} + {roll3} = {totalRoll}");
+Console.WriteLine($"Total Dice roll {roll1} + {roll2} + {roll3} = {totalRoll}");
 
-// if (totalRoll > 14){
-//     Console.WriteLine("You are a winner");
-// }
-// if (totalRoll < 15){
-//     Console.WriteLine("You lose, Try again");
-// }
+if (totalRoll > 14){
+    Console.WriteLine("You are a winner");
+}
+if (totalRoll < 15){
+    Console.WriteLine("You lose, Try again");
+}
+
+if ((roll1 == roll2)|| (roll2 == roll3) || (roll1 == roll3)){
+    Console.WriteLine("You rolled Doublessss!! you will get +2 bonus");
+    totalRoll += 2;
+}
 // Boolean Experssion with contains
 
-string words = "Akolade is a good boy, He stays up to read and write and code.";
-bool res = words.Contains("Akolade");
-Console.WriteLine(res);
+// string words = "Akolade is a good boy, He stays up to read and write and code.";
+// bool res = words.Contains("Akolade");
+// Console.WriteLine(res);
 
-if (words.Contains("Akolade")){
-    Console.WriteLine("Akolade is Present");
-}
+// if (words.Contains("Akolade")){
+//     Console.WriteLine("Akolade is Present");
+// }
