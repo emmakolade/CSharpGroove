@@ -224,8 +224,21 @@ of profgramming languge resources
 
 //challenge
 
-int firstValue = 500;
-int secondValue = 600;
-int largerValue;
-largerValue= Math.Max(firstValue, secondValue);
-Console.WriteLine(largerValue);
+// int firstValue = 500;
+// int secondValue = 600;
+// int largerValue;
+// largerValue= Math.Max(firstValue, secondValue);
+// Console.WriteLine(largerValue);
+
+// code that generates three radom numbers and display in output
+
+Random dice = new Random();
+
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
+
+int  totalRoll = roll1 + roll2 + roll3;
+
+
+Console.WriteLine($"Total Dice roll {roll1} + {roll2} + {roll3} = {totalRoll}");
