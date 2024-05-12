@@ -242,3 +242,10 @@ int  totalRoll = roll1 + roll2 + roll3;
 
 
 Console.WriteLine($"Total Dice roll {roll1} + {roll2} + {roll3} = {totalRoll}");
+
+if (totalRoll > 14){
+    Console.WriteLine("You are a winner");
+}
+if (totalRoll < 15){
+    Console.WriteLine("You lose, Try again");
+}
