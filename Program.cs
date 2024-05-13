@@ -269,10 +269,16 @@ of profgramming languge resources
 // string[] fraudulentOrderIDs = new string[3];
 // fraudulentOrderIDs[0] = "ETR1";
 // fraudulentOrderIDs[1] = "ETY2";
-// fraudulentOrderIDs[2] = "ETU3";
-string[] fraudulentOrderIDs = ["ETR1", "ETY2", "ETU3"];
+// // fraudulentOrderIDs[2] = "ETU3";
+// string[] fraudulentOrderIDs = ["ETR1", "ETY2", "ETU3"];
+string[] fraudulentOrderIDs = {"ETR1", "ETY2", "ETU3"};
 
 Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
 Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
 Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
-// fraudulentOrderIDs[3] = "D000";
+
+fraudulentOrderIDs[0] = "D000";
+
+Console.WriteLine($"reassigned first element: {fraudulentOrderIDs[0]}");
+
+Console.WriteLine($"There are {fraudulentOrderIDs.Length} fradulent oders to review");
