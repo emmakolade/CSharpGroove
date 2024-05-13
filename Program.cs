@@ -232,28 +232,28 @@ of profgramming languge resources
 
 // code that generates three radom numbers and display in output
 
-Random dice = new();
+// Random dice = new();
 
-int roll1 = dice.Next(1, 7);
-int roll2 = dice.Next(1, 7);
-int roll3 = dice.Next(1, 7);
+// int roll1 = dice.Next(1, 7);
+// int roll2 = dice.Next(1, 7);
+// int roll3 = dice.Next(1, 7);
 
-int  totalRoll = roll1 + roll2 + roll3;
+// int  totalRoll = roll1 + roll2 + roll3;
 
 
-Console.WriteLine($"Total Dice roll {roll1} + {roll2} + {roll3} = {totalRoll}");
+// Console.WriteLine($"Total Dice roll {roll1} + {roll2} + {roll3} = {totalRoll}");
 
-if (totalRoll > 14){
-    Console.WriteLine("You are a winner");
-}
-if (totalRoll < 15){
-    Console.WriteLine("You lose, Try again");
-}
+// if (totalRoll > 14){
+//     Console.WriteLine("You are a winner");
+// }
+// if (totalRoll < 15){
+//     Console.WriteLine("You lose, Try again");
+// }
 
-if ((roll1 == roll2)|| (roll2 == roll3) || (roll1 == roll3)){
-    Console.WriteLine("You rolled Doublessss!! you will get +2 bonus");
-    totalRoll += 2;
-}
+// if ((roll1 == roll2)|| (roll2 == roll3) || (roll1 == roll3)){
+//     Console.WriteLine("You rolled Doublessss!! you will get +2 bonus");
+//     totalRoll += 2;
+// }
 // Boolean Experssion with contains
 
 // string words = "Akolade is a good boy, He stays up to read and write and code.";
@@ -263,3 +263,16 @@ if ((roll1 == roll2)|| (roll2 == roll3) || (roll1 == roll3)){
 // if (words.Contains("Akolade")){
 //     Console.WriteLine("Akolade is Present");
 // }
+
+
+// Arrays
+// string[] fraudulentOrderIDs = new string[3];
+// fraudulentOrderIDs[0] = "ETR1";
+// fraudulentOrderIDs[1] = "ETY2";
+// fraudulentOrderIDs[2] = "ETU3";
+string[] fraudulentOrderIDs = ["ETR1", "ETY2", "ETU3"];
+
+Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+// fraudulentOrderIDs[3] = "D000";
