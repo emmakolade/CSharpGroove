@@ -286,6 +286,7 @@ of profgramming languge resources
 
 // ForEach
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 
 string[] names = ["Rowena", "Robin", "Bao"];
 foreach(string name in names){
@@ -310,4 +311,21 @@ foreach(string ids in fradulentIDs){
     if (ids.StartsWith("B")){
         Console.WriteLine($"{ids}:This ID starts with B");
     }
+}
+
+Random randomNumber = new();
+string[] orderIDs = new string[5];
+for (int i=0; i < orderIDs.Length; i++){
+    int prefixValue = randomNumber.Next(65,70);
+    // convert the random prefix value to char and immediately to string 
+    string prefix = Convert.ToChar(prefixValue).ToString();
+    Console.WriteLine($"{prefixValue}: converted to {prefix}===>");
+    string suffix = randomNumber.Next(1,1000).ToString("000");
+    Console.WriteLine($"{randomNumber.Next(1,1000)}: converted to {suffix}<<<<===");
+    orderIDs[i] = $"{prefix} {suffix}";
+
+}
+foreach (var orderID in orderIDs)
+{
+    Console.WriteLine(orderID);
 }
