@@ -287,7 +287,7 @@ of profgramming languge resources
 // ForEach
 using System.Diagnostics.CodeAnalysis;
 
-string[] names = {"Rowena", "Robin", "Bao"};
+string[] names = ["Rowena", "Robin", "Bao"];
 foreach(string name in names){
     Console.WriteLine(name);
 }
@@ -303,3 +303,11 @@ foreach(int items in inventory){
     Console.WriteLine($"Bin {bin} = {items} item (Running Total: {sum})");
 }
 Console.WriteLine($"We have {sum} items in inventory.");
+
+
+var fradulentIDs = new String[] {"B123", "C234","A345","C15","B177","G3003","G235","B179"};
+foreach(string ids in fradulentIDs){
+    if (ids.StartsWith("B")){
+        Console.WriteLine($"{ids}:This ID starts with B");
+    }
+}
