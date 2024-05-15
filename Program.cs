@@ -337,6 +337,7 @@ int[] emmaScores = [90, 85, 87, 98, 68];
 int[] loganScores = [90, 95, 87, 88, 96];
 string[] studenNames = ["Sophia", "Emma", "Andrew", "Logan"];
 
+string gradeScale = "";
 
 foreach (string name in studenNames)
 {
@@ -344,10 +345,10 @@ foreach (string name in studenNames)
     if (name == "Sophia")
         studentScores = sophiaScores;
     else if (name == "Emma")
-        studentScores = andrewScores;
-
-    else if (name == "Emma")
         studentScores = emmaScores;
+
+    else if (name == "Andrew")
+        studentScores = andrewScores;
 
     else if (name == "Logan")
         studentScores = loganScores;
@@ -360,43 +361,50 @@ foreach (string name in studenNames)
         studentSumAssignmentScore += score;
     }
     studentAverageScore = (decimal)studentSumAssignmentScore / currentAssignments;
-    Console.WriteLine($"{name}:\t\t {studentAverageScore} \t");
+    
+    if (studentAverageScore >= 97)
+        gradeScale = "A+";
+
+    else if (studentAverageScore >= 93)
+        gradeScale = "A";
+
+    else if (studentAverageScore >= 90)
+        gradeScale = "A-";
+
+    else if (studentAverageScore >= 87)
+        gradeScale = "B+";
+
+    else if (studentAverageScore >= 83)
+        gradeScale = "B";
+
+    else if (studentAverageScore >= 80)
+        gradeScale = "B-";
+
+    else if (studentAverageScore >= 77)
+        gradeScale = "C+";
+
+    else if (studentAverageScore >= 73)
+        gradeScale = "C";
+
+    else if (studentAverageScore >= 70)
+        gradeScale = "C-";
+
+    else if (studentAverageScore >= 67)
+        gradeScale = "D+";
+
+    else if (studentAverageScore >= 63)
+        gradeScale = "D";
+
+    else if (studentAverageScore >= 60)
+        gradeScale = "D-";
+
+    else
+        gradeScale = "F";
+    // Console.WriteLine($"{name}:\t\t {studentAverageScore} \t");
+    Console.WriteLine($"{name}\t\t{studentAverageScore}\t{gradeScale}");
 }
 Console.WriteLine("Student\t\tGrade\n");
 Console.WriteLine("Press the Enter key to continue");
 Console.ReadLine();
-
-
-
-
-// int sophiaSum = 0;
-// int andrewSum = 0;
-// int emmaSum = 0;
-// int loganSum = 0; 
-
-// decimal sophiaScore;
-// decimal andrewScore;
-// decimal emmaScore;
-// decimal loganScore;
-
-
-
-// foreach(int score in sophiaScores){
-//     sophiaSum += score;
-// }
-// sophiaScore = (decimal)sophiaSum / currentAssignments;
-// andrewScore = (decimal)andrewSum / currentAssignments;
-// emmaScore = (decimal)emmaSum / currentAssignments;
-// loganScore = (decimal)loganSum / currentAssignments;
-
-// Console.WriteLine("Student\t\tGrade\n");
-// Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
-// Console.WriteLine("Andrew:\t\t" + andrewScore + "\tB+");
-// Console.WriteLine("Emma:\t\t" + emmaScore + "\tB");
-// Console.WriteLine("Logan:\t\t" + loganScore + "\tA-");
-
-// Console.WriteLine("Press the Enter key to continue");
-// Console.ReadLine();
-
 
 
