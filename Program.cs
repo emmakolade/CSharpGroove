@@ -288,44 +288,99 @@ of profgramming languge resources
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
-string[] names = ["Rowena", "Robin", "Bao"];
-foreach(string name in names){
-    Console.WriteLine(name);
-}
+// string[] names = ["Rowena", "Robin", "Bao"];
+// foreach(string name in names){
+//     Console.WriteLine(name);
+// }
 
-int[] inventory = { 200, 250, 700, 175, 250};
-int sum = 0;
+// int[] inventory = { 200, 250, 700, 175, 250};
+// int sum = 0;
 
-int bin = 0;
+// int bin = 0;
 
-foreach(int items in inventory){
-    sum += items;
-    bin ++;
-    Console.WriteLine($"Bin {bin} = {items} item (Running Total: {sum})");
-}
-Console.WriteLine($"We have {sum} items in inventory.");
+// foreach(int items in inventory){
+//     sum += items;
+//     bin ++;
+//     Console.WriteLine($"Bin {bin} = {items} item (Running Total: {sum})");
+// }
+// Console.WriteLine($"We have {sum} items in inventory.");
 
 
-var fradulentIDs = new String[] {"B123", "C234","A345","C15","B177","G3003","G235","B179"};
-foreach(string ids in fradulentIDs){
-    if (ids.StartsWith("B")){
-        Console.WriteLine($"{ids}:This ID starts with B");
-    }
-}
+// var fradulentIDs = new String[] {"B123", "C234","A345","C15","B177","G3003","G235","B179"};
+// foreach(string ids in fradulentIDs){
+//     if (ids.StartsWith("B")){
+//         Console.WriteLine($"{ids}:This ID starts with B");
+//     }
+// }
 
-Random randomNumber = new();
-string[] orderIDs = new string[5];
-for (int i=0; i < orderIDs.Length; i++){
-    int prefixValue = randomNumber.Next(65,70);
-    // convert the random prefix value to char and immediately to string 
-    string prefix = Convert.ToChar(prefixValue).ToString();
-    Console.WriteLine($"{prefixValue}: converted to {prefix}===>");
-    string suffix = randomNumber.Next(1,1000).ToString("000");
-    Console.WriteLine($"{randomNumber.Next(1,1000)}: converted to {suffix}<<<<===");
-    orderIDs[i] = $"{prefix} {suffix}";
+// Random randomNumber = new();
+// string[] orderIDs = new string[5];
+// for (int i=0; i < orderIDs.Length; i++){
+//     int prefixValue = randomNumber.Next(65,70);
+//     // convert the random prefix value to char and immediately to string 
+//     string prefix = Convert.ToChar(prefixValue).ToString();
+//     Console.WriteLine($"{prefixValue}: converted to {prefix}");
+//     string suffix = randomNumber.Next(1,1000).ToString("000");
+//     Console.WriteLine($"{randomNumber.Next(1,1000)}: converted to {suffix}");
+//     orderIDs[i] = $"{prefix} {suffix}";
 
-}
-foreach (var orderID in orderIDs)
-{
-    Console.WriteLine(orderID);
-}
+// }
+// foreach (var orderID in orderIDs)
+// {
+//     Console.WriteLine(orderID);
+// }
+
+int currentAssignments = 5;
+int sophia1 = 90;
+int sophia2 = 86;
+int sophia3 = 87;
+int sophia4 = 98;
+int sophia5 = 100;
+
+int andrew1 = 92;
+int andrew2 = 89;
+int andrew3 = 81;
+int andrew4 = 96;
+int andrew5 = 90;
+
+int emma1 = 90;
+int emma2 = 85;
+int emma3 = 87;
+int emma4 = 98;
+int emma5 = 68;
+
+int logan1 = 90;
+int logan2 = 95;
+int logan3 = 87;
+int logan4 = 88;
+int logan5 = 96;
+
+int sophiaSum = 0;
+int andrewSum = 0;
+int emmaSum = 0;
+int loganSum = 0; 
+
+decimal sophiaScore;
+decimal andrewScore;
+decimal emmaScore;
+decimal loganScore;
+
+sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
+andrewSum = andrew1 + andrew2 + andrew3 + andrew4 + andrew5;
+emmaSum = emma1 + emma2 + emma3 + emma4 + emma5;
+loganSum = logan1 + logan2 + logan3 + logan4 + logan5;
+
+
+sophiaScore = (decimal)sophiaSum / currentAssignments;
+andrewScore = (decimal)andrewSum / currentAssignments;
+emmaScore = (decimal)emmaSum / currentAssignments;
+loganScore = (decimal)loganSum / currentAssignments;
+
+Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+Console.WriteLine("Andrew:\t\t" + andrewScore + "\tB+");
+Console.WriteLine("Emma:\t\t" + emmaScore + "\tB");
+Console.WriteLine("Logan:\t\t" + loganScore + "\tA-");
+
+Console.WriteLine("Press the Enter key to continue");
+Console.ReadLine();
