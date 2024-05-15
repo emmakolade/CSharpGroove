@@ -332,37 +332,71 @@ using System.Runtime.CompilerServices;
 
 int currentAssignments = 5;
 int[] sophiaScores = [90, 86, 87, 98, 100];
-int[] andrewScore = [92, 89, 81, 96, 90];
+int[] andrewScores = [92, 89, 81, 96, 90];
 int[] emmaScores = [90, 85, 87, 98, 68];
 int[] loganScores = [90, 95, 87, 88, 96];
+string[] studenNames = ["Sophia", "Emma", "Andrew", "Logan"];
+
+
+foreach (string name in studenNames)
+{
+    int[] studentScores = new int[10];
+    if (name == "Sophia")
+        studentScores = sophiaScores;
+    else if (name == "Emma")
+        studentScores = andrewScores;
+
+    else if (name == "Emma")
+        studentScores = emmaScores;
+
+    else if (name == "Logan")
+        studentScores = loganScores;
+
+
+    int studentSumAssignmentScore = 0;
+    decimal studentAverageScore;
+    foreach (int score in studentScores)
+    {
+        studentSumAssignmentScore += score;
+    }
+    studentAverageScore = (decimal)studentSumAssignmentScore / currentAssignments;
+    Console.WriteLine($"{name}:\t\t {studentAverageScore} \t");
+}
+Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("Press the Enter key to continue");
+Console.ReadLine();
 
 
 
-int sophiaSum = 0;
+
+// int sophiaSum = 0;
 // int andrewSum = 0;
 // int emmaSum = 0;
 // int loganSum = 0; 
 
-decimal sophiaScore;
+// decimal sophiaScore;
 // decimal andrewScore;
 // decimal emmaScore;
 // decimal loganScore;
 
 
 
-foreach(int score in sophiaScores){
-    sophiaSum += score;
-}
-sophiaScore = (decimal)sophiaSum / currentAssignments;
+// foreach(int score in sophiaScores){
+//     sophiaSum += score;
+// }
+// sophiaScore = (decimal)sophiaSum / currentAssignments;
 // andrewScore = (decimal)andrewSum / currentAssignments;
 // emmaScore = (decimal)emmaSum / currentAssignments;
 // loganScore = (decimal)loganSum / currentAssignments;
 
-Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+// Console.WriteLine("Student\t\tGrade\n");
+// Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
 // Console.WriteLine("Andrew:\t\t" + andrewScore + "\tB+");
 // Console.WriteLine("Emma:\t\t" + emmaScore + "\tB");
 // Console.WriteLine("Logan:\t\t" + loganScore + "\tA-");
 
-Console.WriteLine("Press the Enter key to continue");
-Console.ReadLine();
+// Console.WriteLine("Press the Enter key to continue");
+// Console.ReadLine();
+
+
+
