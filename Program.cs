@@ -331,11 +331,15 @@ using System.Runtime.CompilerServices;
 // }
 
 int currentAssignments = 5;
-int[] sophiaScores = [90, 86, 87, 98, 100];
-int[] andrewScores = [92, 89, 81, 96, 90];
-int[] emmaScores = [90, 85, 87, 98, 68];
-int[] loganScores = [90, 95, 87, 88, 96];
-string[] studenNames = ["Sophia", "Emma", "Andrew", "Logan"];
+int[] sophiaScores = [90, 86, 87, 98, 100, 94, 90];
+int[] andrewScores = [92, 89, 81, 96, 90, 89];
+int[] emmaScores = [90, 85, 87, 98, 68, 89, 89, 89];
+int[] loganScores = [90, 95, 87, 88, 96, 96];
+int[] beckyScores = [92, 91, 90, 91, 92, 92, 92];
+int[] chrisScores = [84, 86, 88, 90, 92, 94, 96, 98];
+int[] ericScores = [80, 90, 100, 80, 90, 100, 80, 90];
+int[] gregorScores = [91, 91, 91, 91, 91, 91, 91];    
+string[] studenNames = ["Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor"];
 
 string gradeScale = "";
 
@@ -352,13 +356,28 @@ foreach (string name in studenNames)
 
     else if (name == "Logan")
         studentScores = loganScores;
+    else if (name == "Becky")
+        studentScores = beckyScores;
+    else if (name == "Chris")
+        studentScores = chrisScores;
+    else if (name == "Eric")
+        studentScores = ericScores;
+    else if (name == "Gregor")
+        studentScores = gregorScores;
+    else
+        continue;
 
 
     int studentSumAssignmentScore = 0;
     decimal studentAverageScore;
+    int gradedAssignments = 0;
     foreach (int score in studentScores)
     {
-        studentSumAssignmentScore += score;
+        gradedAssignments += 1;
+        if (gradedAssignments <= currentAssignments)
+            studentSumAssignmentScore += score;
+        else
+            studentSumAssignmentScore += score / 10;
     }
     studentAverageScore = (decimal)studentSumAssignmentScore / currentAssignments;
     
