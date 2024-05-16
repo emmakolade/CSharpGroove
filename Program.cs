@@ -342,6 +342,7 @@ int[] gregorScores = [91, 91, 91, 91, 91, 91, 91];
 string[] studenNames = ["Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor"];
 
 string gradeScale = "";
+Console.Clear();
 
 foreach (string name in studenNames)
 {
@@ -368,18 +369,28 @@ foreach (string name in studenNames)
         continue;
 
 
-    int studentSumAssignmentScore = 0;
-    decimal studentAverageScore;
     int gradedAssignments = 0;
+    int studentSumAssignmentScore = 0;
+    int gradedExtraCreditAssignments = 0;
+    int sumExtraCreditScores = 0;
+
+    decimal studentAverageScore;
+    decimal currentStudentExtraCreditScore = 0;
+    decimal currentStudentGrade=0;
     foreach (int score in studentScores)
     {
         gradedAssignments += 1;
         if (gradedAssignments <= currentAssignments)
             studentSumAssignmentScore += score;
         else
-            studentSumAssignmentScore += score / 10;
+            gradedExtraCreditAssignments += 1;
+            sumExtraCreditScores += score;
     }
     studentAverageScore = (decimal)studentSumAssignmentScore / currentAssignments;
+    currentStudentExtraCreditScore = (decimal)sumExtraCreditScores / gradedExtraCreditAssignments;
+    currentStudentGrade = (decimal)(studentSumAssignmentScore + ((decimal)sumExtraCreditScores / 10)) / currentAssignments;
+
+
     
     if (studentAverageScore >= 97)
         gradeScale = "A+";
@@ -420,7 +431,7 @@ foreach (string name in studenNames)
     else
         gradeScale = "F";
     // Console.WriteLine($"{name}:\t\t {studentAverageScore} \t");
-    Console.WriteLine($"{name}\t\t{studentAverageScore}\t{gradeScale}");
+    Console.WriteLine($"{name}\t\t{studentAverageScore}\t\t{currentStudentGrade}\t\t{gradeScale}\t{currentStudentExtraCreditScore} ({(((decimal)sumExtraCreditScores / 10) / currentAssignments)} pts)");
 }
 Console.WriteLine("Student\t\tGrade\n");
 Console.WriteLine("Press the Enter key to continue");
