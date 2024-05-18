@@ -466,3 +466,10 @@ using System.Runtime.CompilerServices;
 int salesAmount = 1001;
 Console.WriteLine($"Your Discount is : ${(salesAmount < 1000 ? 100 : 50)}");
 
+
+Random randomCoinValue = new();
+int flipTheCoin = randomCoinValue.Next(0,2);
+Console.WriteLine($"Coin FLipped {flipTheCoin}");
+Console.WriteLine($"You Flipped a {(flipTheCoin == 0 ? "Head" : "Tail")}");
+
+
