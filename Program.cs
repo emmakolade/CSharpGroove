@@ -451,10 +451,13 @@ string val1 = " a";
 string val = "A ";
 
 // Console.WriteLine(val1.Trim().Equals(val.Trim(), StringComparison.CurrentCultureIgnoreCase));
-Console.WriteLine(val1.Trim().Equals(val.Trim(), StringComparison.CurrentCultureIgnoreCase));
+// Console.WriteLine(val1.Trim().Equals(val.Trim(), StringComparison.CurrentCultureIgnoreCase));
 
 
 string pangram = "this string contains every letter of the alphabeth";
 
-Console.WriteLine(pangram.Contains("every"));
-Console.WriteLine(pangram.Contains("letters"));
+// Console.WriteLine(pangram.Contains("every"));
+// Console.WriteLine(pangram.Contains("letters"));
+
+Console.WriteLine(pangram.Contains("alphabeth") == false);
+Console.WriteLine(!pangram.Contains("alphabeth"));
