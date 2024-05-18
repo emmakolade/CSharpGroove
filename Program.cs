@@ -330,111 +330,118 @@ using System.Runtime.CompilerServices;
 //     Console.WriteLine(orderID);
 // }
 
-int currentAssignments = 5;
-int[] sophiaScores = [90, 86, 87, 98, 100, 94, 90];
-int[] andrewScores = [92, 89, 81, 96, 90, 89];
-int[] emmaScores = [90, 85, 87, 98, 68, 89, 89, 89];
-int[] loganScores = [90, 95, 87, 88, 96, 96];
-int[] beckyScores = [92, 91, 90, 91, 92, 92, 92];
-int[] chrisScores = [84, 86, 88, 90, 92, 94, 96, 98];
-int[] ericScores = [80, 90, 100, 80, 90, 100, 80, 90];
-int[] gregorScores = [91, 91, 91, 91, 91, 91, 91];    
-string[] studenNames = ["Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor"];
+// int currentAssignments = 5;
+// int[] sophiaScores = [90, 86, 87, 98, 100, 94, 90];
+// int[] andrewScores = [92, 89, 81, 96, 90, 89];
+// int[] emmaScores = [90, 85, 87, 98, 68, 89, 89, 89];
+// int[] loganScores = [90, 95, 87, 88, 96, 96];
+// int[] beckyScores = [92, 91, 90, 91, 92, 92, 92];
+// int[] chrisScores = [84, 86, 88, 90, 92, 94, 96, 98];
+// int[] ericScores = [80, 90, 100, 80, 90, 100, 80, 90];
+// int[] gregorScores = [91, 91, 91, 91, 91, 91, 91];    
+// string[] studenNames = ["Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor"];
 
-string gradeScale = "";
-Console.Clear();
+// string gradeScale = "";
+// Console.Clear();
 
-foreach (string name in studenNames)
-{
-    int[] studentScores = new int[10];
-    if (name == "Sophia")
-        studentScores = sophiaScores;
-    else if (name == "Emma")
-        studentScores = emmaScores;
+// foreach (string name in studenNames)
+// {
+//     int[] studentScores = new int[10];
+//     if (name == "Sophia")
+//         studentScores = sophiaScores;
+//     else if (name == "Emma")
+//         studentScores = emmaScores;
 
-    else if (name == "Andrew")
-        studentScores = andrewScores;
+//     else if (name == "Andrew")
+//         studentScores = andrewScores;
 
-    else if (name == "Logan")
-        studentScores = loganScores;
-    else if (name == "Becky")
-        studentScores = beckyScores;
-    else if (name == "Chris")
-        studentScores = chrisScores;
-    else if (name == "Eric")
-        studentScores = ericScores;
-    else if (name == "Gregor")
-        studentScores = gregorScores;
-    else
-        continue;
+//     else if (name == "Logan")
+//         studentScores = loganScores;
+//     else if (name == "Becky")
+//         studentScores = beckyScores;
+//     else if (name == "Chris")
+//         studentScores = chrisScores;
+//     else if (name == "Eric")
+//         studentScores = ericScores;
+//     else if (name == "Gregor")
+//         studentScores = gregorScores;
+//     else
+//         continue;
 
 
-    int gradedAssignments = 0;
-    int studentSumAssignmentScore = 0;
-    int gradedExtraCreditAssignments = 0;
-    int sumExtraCreditScores = 0;
+//     int gradedAssignments = 0;
+//     int studentSumAssignmentScore = 0;
+//     int gradedExtraCreditAssignments = 0;
+//     int sumExtraCreditScores = 0;
 
-    decimal studentAverageScore;
-    decimal currentStudentExtraCreditScore = 0;
-    decimal currentStudentGrade=0;
-    foreach (int score in studentScores)
-    {
-        gradedAssignments += 1;
-        if (gradedAssignments <= currentAssignments)
-            studentSumAssignmentScore += score;
-        else
-            gradedExtraCreditAssignments += 1;
-            sumExtraCreditScores += score;
-    }
-    studentAverageScore = (decimal)studentSumAssignmentScore / currentAssignments;
-    currentStudentExtraCreditScore = (decimal)sumExtraCreditScores / gradedExtraCreditAssignments;
-    currentStudentGrade = (decimal)(studentSumAssignmentScore + ((decimal)sumExtraCreditScores / 10)) / currentAssignments;
+//     decimal studentAverageScore;
+//     decimal currentStudentExtraCreditScore = 0;
+//     decimal currentStudentGrade=0;
+//     foreach (int score in studentScores)
+//     {
+//         gradedAssignments += 1;
+//         if (gradedAssignments <= currentAssignments)
+//             studentSumAssignmentScore += score;
+//         else
+//             gradedExtraCreditAssignments += 1;
+//             sumExtraCreditScores += score;
+//     }
+//     studentAverageScore = (decimal)studentSumAssignmentScore / currentAssignments;
+//     currentStudentExtraCreditScore = (decimal)sumExtraCreditScores / gradedExtraCreditAssignments;
+//     currentStudentGrade = (decimal)(studentSumAssignmentScore + ((decimal)sumExtraCreditScores / 10)) / currentAssignments;
 
 
     
-    if (studentAverageScore >= 97)
-        gradeScale = "A+";
+//     if (studentAverageScore >= 97)
+//         gradeScale = "A+";
 
-    else if (studentAverageScore >= 93)
-        gradeScale = "A";
+//     else if (studentAverageScore >= 93)
+//         gradeScale = "A";
 
-    else if (studentAverageScore >= 90)
-        gradeScale = "A-";
+//     else if (studentAverageScore >= 90)
+//         gradeScale = "A-";
 
-    else if (studentAverageScore >= 87)
-        gradeScale = "B+";
+//     else if (studentAverageScore >= 87)
+//         gradeScale = "B+";
 
-    else if (studentAverageScore >= 83)
-        gradeScale = "B";
+//     else if (studentAverageScore >= 83)
+//         gradeScale = "B";
 
-    else if (studentAverageScore >= 80)
-        gradeScale = "B-";
+//     else if (studentAverageScore >= 80)
+//         gradeScale = "B-";
 
-    else if (studentAverageScore >= 77)
-        gradeScale = "C+";
+//     else if (studentAverageScore >= 77)
+//         gradeScale = "C+";
 
-    else if (studentAverageScore >= 73)
-        gradeScale = "C";
+//     else if (studentAverageScore >= 73)
+//         gradeScale = "C";
 
-    else if (studentAverageScore >= 70)
-        gradeScale = "C-";
+//     else if (studentAverageScore >= 70)
+//         gradeScale = "C-";
 
-    else if (studentAverageScore >= 67)
-        gradeScale = "D+";
+//     else if (studentAverageScore >= 67)
+//         gradeScale = "D+";
 
-    else if (studentAverageScore >= 63)
-        gradeScale = "D";
+//     else if (studentAverageScore >= 63)
+//         gradeScale = "D";
 
-    else if (studentAverageScore >= 60)
-        gradeScale = "D-";
+//     else if (studentAverageScore >= 60)
+//         gradeScale = "D-";
 
-    else
-        gradeScale = "F";
-    // Console.WriteLine($"{name}:\t\t {studentAverageScore} \t");
-    Console.WriteLine($"{name}\t\t{studentAverageScore}\t\t{currentStudentGrade}\t\t{gradeScale}\t{currentStudentExtraCreditScore} ({(((decimal)sumExtraCreditScores / 10) / currentAssignments)} pts)");
-}
-Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("Press the Enter key to continue");
-Console.ReadLine();
+//     else
+//         gradeScale = "F";
+//     // Console.WriteLine($"{name}:\t\t {studentAverageScore} \t");
+//     Console.WriteLine($"{name}\t\t{studentAverageScore}\t\t{currentStudentGrade}\t\t{gradeScale}\t{currentStudentExtraCreditScore} ({(((decimal)sumExtraCreditScores / 10) / currentAssignments)} pts)");
+// }
+// Console.WriteLine("Student\t\tGrade\n");
+// Console.WriteLine("Press the Enter key to continue");
+// Console.ReadLine();
 
 
+// equality operator 
+Console.WriteLine("a"== "a ");
+Console.WriteLine("a"== "A");
+Console.WriteLine(1 == 2);
+
+string myValue = "a";
+Console.WriteLine(myValue == "a");
