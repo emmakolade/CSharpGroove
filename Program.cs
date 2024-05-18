@@ -450,4 +450,5 @@ using System.Runtime.CompilerServices;
 string val1 = " a";
 string val = "A ";
 
-Console.WriteLine(val1.Trim().ToLower() == val.Trim().ToLower());
+// Console.WriteLine(val1.Trim().Equals(val.Trim(), StringComparison.CurrentCultureIgnoreCase));
+Console.WriteLine(val1.Trim().Equals(val.Trim(), StringComparison.CurrentCultureIgnoreCase));
