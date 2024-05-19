@@ -531,32 +531,29 @@ using System.Security.Cryptography;
 
 // switch case
 
-int employeeLevel = 200;
+int employeeLevel = 100;
 string employeeName = "Akolade Olanipekun";
 string employeeTitle = "";
-// switch (employeeLevel){
+switch (employeeLevel){
 
-//     case 100:
-//         employeeTitle = "Junior Associate";
-//         break;
-//     case 200:
-//         employeeTitle = "Senior Associate";
-//         break;
-//     case 300:
-//         employeeTitle = "Manager";
-//         break;
-//     default:
-//         employeeTitle = "Associate";
-//         break;
+    case 100:
+    case 200:
+        employeeTitle = "Senior Associate";
+        break;
+    case 300:
+        employeeTitle = "Manager";
+        break;
+    default:
+        employeeTitle = "Associate";
+        break;
 
-// }
-// Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
+}
+Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
 
 // Switch Expression 
 employeeTitle = employeeLevel switch
 {
-    100 => "Junior Associate",
-    200 => "Senior Associate",
+    100 or 200 => "Senior Associate",
     300 => "Manager",
     _ => "Associate",
 };
