@@ -391,7 +391,7 @@ using System.Runtime.CompilerServices;
 //     currentStudentGrade = (decimal)(studentSumAssignmentScore + ((decimal)sumExtraCreditScores / 10)) / currentAssignments;
 
 
-    
+
 //     if (studentAverageScore >= 97)
 //         gradeScale = "A+";
 
@@ -500,7 +500,6 @@ using System.Runtime.CompilerServices;
 
 
 // bool flag = true;
-int value;
 // if(flag){
 //     value = 5;
 //     Console.WriteLine($"There is a value inside the code block: {value}");
@@ -509,12 +508,22 @@ int value;
 // Console.WriteLine($"There is a value outside the code block: {value}");
 
 
-if (true){
-    value = 10;
-    Console.WriteLine($"There is a value inside the code block: {value}");
+int[] numbers = [4, 8, 15, 16, 23, 42];
+int total = 0;
+bool foundNumber = false;
 
+foreach (int number in numbers)
+{
+    total += number;
+
+    if (number == 42)
+    {
+        foundNumber = true;
+    }
 }
-Console.WriteLine($"There is a value outside the code block: {value}");
 
-
-
+if (foundNumber)
+{
+    Console.WriteLine("the list contains 42");
+}
+Console.WriteLine($"Total:{total}");
