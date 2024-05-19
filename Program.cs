@@ -287,6 +287,7 @@ of profgramming languge resources
 // ForEach
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 
 // string[] names = ["Rowena", "Robin", "Bao"];
 // foreach(string name in names){
@@ -533,22 +534,33 @@ using System.Runtime.CompilerServices;
 int employeeLevel = 200;
 string employeeName = "Akolade Olanipekun";
 string employeeTitle = "";
+// switch (employeeLevel){
 
-switch (employeeLevel){
+//     case 100:
+//         employeeTitle = "Junior Associate";
+//         break;
+//     case 200:
+//         employeeTitle = "Senior Associate";
+//         break;
+//     case 300:
+//         employeeTitle = "Manager";
+//         break;
+//     default:
+//         employeeTitle = "Associate";
+//         break;
 
-    case 100:
-        employeeTitle = "Junior Associate";
-        break;
-    case 200:
-        employeeTitle = "Senior Associate";
-        break;
-    case 300:
-        employeeTitle = "Manager";
-        break;
-    default:
-        employeeTitle = "Associate";
-        break;
-}
+// }
+// Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
+
+// Switch Expression 
+employeeTitle = employeeLevel switch
+{
+    100 => "Junior Associate",
+    200 => "Senior Associate",
+    300 => "Manager",
+    _ => "Associate",
+};
+
 
 Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
 
