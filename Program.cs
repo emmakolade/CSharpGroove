@@ -531,34 +531,137 @@ using System.Security.Cryptography;
 
 // switch case
 
-int employeeLevel = 100;
-string employeeName = "Akolade Olanipekun";
-string employeeTitle = "";
-switch (employeeLevel){
+// int employeeLevel = 100;
+// string employeeName = "Akolade Olanipekun";
+// string employeeTitle = "";
+// switch (employeeLevel){
 
-    case 100:
-    case 200:
-        employeeTitle = "Senior Associate";
+//     case 100:
+//     case 200:
+//         employeeTitle = "Senior Associate";
+//         break;
+//     case 300:
+//         employeeTitle = "Manager";
+//         break;
+//     default:
+//         employeeTitle = "Associate";
+//         break;
+
+// }
+// Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
+
+// // Switch Expression 
+// employeeTitle = employeeLevel switch
+// {
+//     100 or 200 => "Senior Associate",
+//     300 => "Manager",
+//     _ => "Associate",
+// };
+
+
+// Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
+
+
+// SKU = Stock Keeping Unit. 
+// SKU value format: <product #>-<2-letter color code>-<size code>
+string sku = "01-MN-L";
+
+string[] product = sku.Split('-');
+
+string type = "";
+string color = "";
+string size = "";
+
+if (product[0] == "01")
+{
+    type = "Sweat shirt";
+} else if (product[0] == "02")
+{
+    type = "T-Shirt";
+} else if (product[0] == "03")
+{
+    type = "Sweat pants";
+}
+else
+{
+    type = "Other";
+}
+
+if (product[1] == "BL")
+{
+    color = "Black";
+} else if (product[1] == "MN")
+{
+    color = "Maroon";
+} else
+{
+    color = "White";
+}
+
+if (product[2] == "S")
+{
+    size = "Small";
+} else if (product[2] == "M")
+{
+    size = "Medium";
+} else if (product[2] == "L")
+{
+    size = "Large";
+} else
+{
+    size = "One Size Fits All";
+}
+
+Console.WriteLine($" example Product: {size} {color} {type}");
+
+string stockKeepingUnit = "01-MN-L";
+
+string[] shirtProduct = stockKeepingUnit.Split('-');
+
+
+string shirtType = "";
+string shirtColor = "";
+string shirtSize = "";
+
+
+switch (shirtProduct[0])
+{
+    case "01":
+        shirtType = "Sweat Shirt";
         break;
-    case 300:
-        employeeTitle = "Manager";
+    case "02":
+        shirtType = "T-Shirt";
+        break;
+    case "03":
+        shirtType = "Sweat Pants";
         break;
     default:
-        employeeTitle = "Associate";
+        shirtType = "Others";
         break;
-
 }
-Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
 
-// Switch Expression 
-employeeTitle = employeeLevel switch
+shirtType = shirtProduct[0] switch
 {
-    100 or 200 => "Senior Associate",
-    300 => "Manager",
-    _ => "Associate",
+    "01" => "Sweat Shirt",
+    "02" => "T-Shirt",
+    "03" => "Sweat Pants",
+    _ => "Others"
 };
 
+shirtColor =  shirtProduct[1] switch 
+{
+    "BL" => "Black",
+    "MN" => "Maroon",
+    _ => "White"
+};
 
-Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
+shirtSize =shirtProduct[2]  switch {
+    "S" => "Small",
+    "M" => "Medium",
+    "L" => "Large",
+    _ => "One Size Fits All",
+
+};
+Console.WriteLine($" My  Shirt Product: {shirtSize} {shirtColor} {shirtType}");
 
 
