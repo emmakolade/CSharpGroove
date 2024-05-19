@@ -508,22 +508,48 @@ using System.Runtime.CompilerServices;
 // Console.WriteLine($"There is a value outside the code block: {value}");
 
 
-int[] numbers = [4, 8, 15, 16, 23, 42];
-int total = 0;
-bool foundNumber = false;
+// int[] numbers = [4, 8, 15, 16, 23, 42];
+// int total = 0;
+// bool foundNumber = false;
 
-foreach (int number in numbers)
-{
-    total += number;
+// foreach (int number in numbers)
+// {
+//     total += number;
 
-    if (number == 42)
-    {
-        foundNumber = true;
-    }
+//     if (number == 42)
+//     {
+//         foundNumber = true;
+//     }
+// }
+
+// if (foundNumber)
+// {
+//     Console.WriteLine("the list contains 42");
+// }
+// Console.WriteLine($"Total:{total}");
+
+// switch case
+
+int employeeLevel = 200;
+string employeeName = "Akolade Olanipekun";
+string employeeTitle = "";
+
+switch (employeeLevel){
+
+    case 100:
+        employeeTitle = "Junior Associate";
+        break;
+    case 200:
+        employeeTitle = "Senior Associate";
+        break;
+    case 300:
+        employeeTitle = "Manager";
+        break;
+    default:
+        employeeTitle = "Associate";
+        break;
 }
 
-if (foundNumber)
-{
-    Console.WriteLine("the list contains 42");
-}
-Console.WriteLine($"Total:{total}");
+Console.WriteLine($"the Employee name is: {employeeName} with title: {employeeTitle}");
+
+
