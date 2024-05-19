@@ -463,13 +463,58 @@ using System.Runtime.CompilerServices;
 // Console.WriteLine(!pangram.Contains("alphabeth"));
 
 
-int salesAmount = 1001;
-Console.WriteLine($"Your Discount is : ${(salesAmount < 1000 ? 100 : 50)}");
+// int salesAmount = 1001;
+// Console.WriteLine($"Your Discount is : ${(salesAmount < 1000 ? 100 : 50)}");
 
 
-Random randomCoinValue = new();
-int flipTheCoin = randomCoinValue.Next(0,2);
-Console.WriteLine($"Coin FLipped {flipTheCoin}");
-Console.WriteLine($"You Flipped a {(flipTheCoin == 0 ? "Head" : "Tail")}");
+// Random randomCoinValue = new();
+// int flipTheCoin = randomCoinValue.Next(0,2);
+// Console.WriteLine($"Coin FLipped {flipTheCoin}");
+// Console.WriteLine($"You Flipped a {(flipTheCoin == 0 ? "Head" : "Tail")}");
+
+
+// string permission = "AdminManager";
+// int level = 20;
+
+
+// if (permission.Contains("Admin")){
+
+//     if(level > 55)
+//         Console.WriteLine("Welcome, SuperAdmin");
+//     else
+//         Console.WriteLine("Welcome, Admin");
+// }
+
+// if (permission.Contains("Manager")){
+
+//     if(level >= 20)
+//         Console.WriteLine("Contact an Admin for access.");
+//     else
+//         Console.WriteLine("You do not have sufficient privileges");
+// }
+
+// else{
+
+//         Console.WriteLine("You do not have sufficient privileges.");        Console.WriteLine("You do not have sufficient privileges");
+// }
+
+
+// bool flag = true;
+int value;
+// if(flag){
+//     value = 5;
+//     Console.WriteLine($"There is a value inside the code block: {value}");
+// }
+// value = 10;
+// Console.WriteLine($"There is a value outside the code block: {value}");
+
+
+if (true){
+    value = 10;
+    Console.WriteLine($"There is a value inside the code block: {value}");
+
+}
+Console.WriteLine($"There is a value outside the code block: {value}");
+
 
 
