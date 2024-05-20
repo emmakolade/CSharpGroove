@@ -564,104 +564,133 @@ using System.Security.Cryptography;
 
 // SKU = Stock Keeping Unit. 
 // SKU value format: <product #>-<2-letter color code>-<size code>
-string sku = "01-MN-L";
+// string sku = "01-MN-L";
 
-string[] product = sku.Split('-');
+// string[] product = sku.Split('-');
 
-string type = "";
-string color = "";
-string size = "";
+// string type = "";
+// string color = "";
+// string size = "";
 
-if (product[0] == "01")
+// if (product[0] == "01")
+// {
+//     type = "Sweat shirt";
+// } else if (product[0] == "02")
+// {
+//     type = "T-Shirt";
+// } else if (product[0] == "03")
+// {
+//     type = "Sweat pants";
+// }
+// else
+// {
+//     type = "Other";
+// }
+
+// if (product[1] == "BL")
+// {
+//     color = "Black";
+// } else if (product[1] == "MN")
+// {
+//     color = "Maroon";
+// } else
+// {
+//     color = "White";
+// }
+
+// if (product[2] == "S")
+// {
+//     size = "Small";
+// } else if (product[2] == "M")
+// {
+//     size = "Medium";
+// } else if (product[2] == "L")
+// {
+//     size = "Large";
+// } else
+// {
+//     size = "One Size Fits All";
+// }
+
+// Console.WriteLine($" example Product: {size} {color} {type}");
+
+// string stockKeepingUnit = "01-MN-L";
+
+// string[] shirtProduct = stockKeepingUnit.Split('-');
+
+
+// string shirtType = "";
+// string shirtColor = "";
+// string shirtSize = "";
+
+
+// switch (shirtProduct[0])
+// {
+//     case "01":
+//         shirtType = "Sweat Shirt";
+//         break;
+//     case "02":
+//         shirtType = "T-Shirt";
+//         break;
+//     case "03":
+//         shirtType = "Sweat Pants";
+//         break;
+//     default:
+//         shirtType = "Others";
+//         break;
+// }
+
+// shirtType = shirtProduct[0] switch
+// {
+//     "01" => "Sweat Shirt",
+//     "02" => "T-Shirt",
+//     "03" => "Sweat Pants",
+//     _ => "Others"
+// };
+
+// shirtColor =  shirtProduct[1] switch 
+// {
+//     "BL" => "Black",
+//     "MN" => "Maroon",
+//     _ => "White"
+// };
+
+// shirtSize =shirtProduct[2]  switch {
+//     "S" => "Small",
+//     "M" => "Medium",
+//     "L" => "Large",
+//     _ => "One Size Fits All",
+
+// };
+// Console.WriteLine($" My  Shirt Product: {shirtSize} {shirtColor} {shirtType}");
+
+
+
+// for (int i = 0; i < 10; i ++){
+//     Console.WriteLine(i);
+//     if(i == 7)
+//         break;
+// }
+
+
+// string[] names = ["Akolade", "Emmanuel", "Olanipekun", "Temitope"];
+// Console.WriteLine(names.Length);
+// Console.WriteLine(names.Length - 1);
+// for (int i = names.Length - 1; i >= 0; i--){
+//     Console.WriteLine(names[i]);
+// }
+
+// Examine the Limitation of the foreach statement 
+string[] names = ["Akolade", "Emmanuel", "Olanipekun", "Temitope"];
+for (int i =0; i < names.Length; i++)
 {
-    type = "Sweat shirt";
-} else if (product[0] == "02")
-{
-    type = "T-Shirt";
-} else if (product[0] == "03")
-{
-    type = "Sweat pants";
+    if (names[i] == "Olanipekun") {
+        names[i] = "Olajide";
+    }
+    Console.WriteLine(i);
+
 }
-else
-{
-    type = "Other";
+
+foreach( var name in names){
+    Console.WriteLine(name);
 }
-
-if (product[1] == "BL")
-{
-    color = "Black";
-} else if (product[1] == "MN")
-{
-    color = "Maroon";
-} else
-{
-    color = "White";
-}
-
-if (product[2] == "S")
-{
-    size = "Small";
-} else if (product[2] == "M")
-{
-    size = "Medium";
-} else if (product[2] == "L")
-{
-    size = "Large";
-} else
-{
-    size = "One Size Fits All";
-}
-
-Console.WriteLine($" example Product: {size} {color} {type}");
-
-string stockKeepingUnit = "01-MN-L";
-
-string[] shirtProduct = stockKeepingUnit.Split('-');
-
-
-string shirtType = "";
-string shirtColor = "";
-string shirtSize = "";
-
-
-switch (shirtProduct[0])
-{
-    case "01":
-        shirtType = "Sweat Shirt";
-        break;
-    case "02":
-        shirtType = "T-Shirt";
-        break;
-    case "03":
-        shirtType = "Sweat Pants";
-        break;
-    default:
-        shirtType = "Others";
-        break;
-}
-
-shirtType = shirtProduct[0] switch
-{
-    "01" => "Sweat Shirt",
-    "02" => "T-Shirt",
-    "03" => "Sweat Pants",
-    _ => "Others"
-};
-
-shirtColor =  shirtProduct[1] switch 
-{
-    "BL" => "Black",
-    "MN" => "Maroon",
-    _ => "White"
-};
-
-shirtSize =shirtProduct[2]  switch {
-    "S" => "Small",
-    "M" => "Medium",
-    "L" => "Large",
-    _ => "One Size Fits All",
-
-};
-Console.WriteLine($" My  Shirt Product: {shirtSize} {shirtColor} {shirtType}");
-
-
