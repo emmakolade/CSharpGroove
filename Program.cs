@@ -287,6 +287,7 @@ of profgramming languge resources
 // ForEach
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using System.Security.Cryptography;
 
 // string[] names = ["Rowena", "Robin", "Bao"];
@@ -681,16 +682,34 @@ using System.Security.Cryptography;
 // }
 
 // Examine the Limitation of the foreach statement 
-string[] names = ["Akolade", "Emmanuel", "Olanipekun", "Temitope"];
-for (int i =0; i < names.Length; i++)
-{
-    if (names[i] == "Olanipekun") {
-        names[i] = "Olajide";
+// string[] names = ["Akolade", "Emmanuel", "Olanipekun", "Temitope"];
+// for (int i =0; i < names.Length; i++)
+// {
+//     if (names[i] == "Olanipekun") {
+//         names[i] = "Olajide";
+//     }
+//     Console.WriteLine(i);
+
+// }
+
+// foreach( var name in names){
+//     Console.WriteLine(name);
+// }
+
+// FizzBuzz
+
+for (int i = 0; i <= 100; i++){
+    if(i % 3 == 0){
+        Console.WriteLine($"{i} - Fizz");
     }
-    Console.WriteLine(i);
+    else if( i % 5 == 0){
+        Console.WriteLine($"{i} - Buzz");
+    }
 
-}
+    else if ((i % 3 == 0) && (i % 5 == 0)){
+        Console.WriteLine($"{i} - FizzBuzz");
 
-foreach( var name in names){
-    Console.WriteLine(name);
+    }
+    else
+        Console.WriteLine($"{i}");
 }
