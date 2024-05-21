@@ -719,7 +719,15 @@ using System.Security.Cryptography;
 Random randomValue = new();
 
 int currentValue = 0;
-do {
-    currentValue = randomValue.Next(1, 11);
-    Console.WriteLine($"The current value is: {currentValue}");
-} while (currentValue != 6);
+// do {
+//     currentValue = randomValue.Next(1, 11);
+//     Console.WriteLine($"The current value is: {currentValue}");
+// } while (currentValue != 6);
+
+while (currentValue >=3)
+{
+    Console.WriteLine($"The current value is: {currentValue}  >>");
+    currentValue = randomValue.Next(1, 10);
+}
+Console.WriteLine($"This Number is before 3: {currentValue}");
+
