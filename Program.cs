@@ -698,18 +698,28 @@ using System.Security.Cryptography;
 
 // FizzBuzz
 
-for (int i = 0; i <= 100; i++){
-    if(i % 3 == 0){
-        Console.WriteLine($"{i} - Fizz");
-    }
-    else if( i % 5 == 0){
-        Console.WriteLine($"{i} - Buzz");
-    }
+// for (int i = 0; i <= 100; i++){
+//     if(i % 3 == 0){
+//         Console.WriteLine($"{i} - Fizz");
+//     }
+//     else if( i % 5 == 0){
+//         Console.WriteLine($"{i} - Buzz");
+//     }
 
-    else if ((i % 3 == 0) && (i % 5 == 0)){
-        Console.WriteLine($"{i} - FizzBuzz");
+//     else if ((i % 3 == 0) && (i % 5 == 0)){
+//         Console.WriteLine($"{i} - FizzBuzz");
 
-    }
-    else
-        Console.WriteLine($"{i}");
-}
+//     }
+//     else
+//         Console.WriteLine($"{i}");
+// }
+
+// Do While 
+
+Random randomValue = new();
+
+int currentValue = 0;
+do {
+    currentValue = randomValue.Next(1, 11);
+    Console.WriteLine($"The current value is: {currentValue}");
+} while (currentValue != 6);
