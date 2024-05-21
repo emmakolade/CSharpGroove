@@ -718,16 +718,18 @@ using System.Security.Cryptography;
 
 Random randomValue = new();
 
-int currentValue = 0;
-// do {
-//     currentValue = randomValue.Next(1, 11);
-//     Console.WriteLine($"The current value is: {currentValue}");
-// } while (currentValue != 6);
+int currentValue = randomValue.Next(1, 11);
+do {
+    currentValue = randomValue.Next(1, 11);
 
-while (currentValue >=3)
-{
-    Console.WriteLine($"The current value is: {currentValue}  >>");
-    currentValue = randomValue.Next(1, 10);
-}
-Console.WriteLine($"This Number is before 3: {currentValue}");
+    if (currentValue >=8) continue;
+    Console.WriteLine($"The current value is: {currentValue}");
+} while (currentValue != 7);
+
+// while (currentValue >=3)
+// {
+//     Console.WriteLine($"The current value is: {currentValue}  >>");
+//     currentValue = randomValue.Next(1, 10);
+// }
+// Console.WriteLine($"This Number is before 3: {currentValue}");
 
