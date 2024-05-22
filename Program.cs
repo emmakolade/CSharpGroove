@@ -739,19 +739,16 @@ int monsterHealth = 10;
 Random randomValue = new();
 do
 {
-    int heroAttacks = randomValue.Next(1, 11);
-    if (heroAttacks <= 10){
-        monsterHealth -= 1;
-        Console.WriteLine($"Monster was damaged and lost {heroAttacks} health and now has {monsterHealth} health");
-    }
+    int attacks = randomValue.Next(1, 11);
+    monsterHealth -= attacks;
+    Console.WriteLine($"Monster was damaged and lost {attacks} health and now has {monsterHealth} health");
     if(monsterHealth <= 0){
         continue;
     }
-    int monsterAttacks = randomValue.Next(1, 11);
-    if (monsterAttacks <= 10){
-        heroHealth -= 1;
-        Console.WriteLine($"Hero was damaged and lost {monsterAttacks} health and now has {heroHealth} health");
-    }
+     attacks = randomValue.Next(1, 11);
+
+    heroHealth -= attacks;
+    Console.WriteLine($"Hero was damaged and lost {attacks} health and now has {heroHealth} health");
     if(heroHealth <= 0){
         continue;
     }
