@@ -716,15 +716,15 @@ using System.Security.Cryptography;
 
 // Do While 
 
-Random randomValue = new();
+// Random randomValue = new();
 
-int currentValue = randomValue.Next(1, 11);
-do {
-    currentValue = randomValue.Next(1, 11);
+// int currentValue = randomValue.Next(1, 11);
+// do {
+//     currentValue = randomValue.Next(1, 11);
 
-    if (currentValue >=8) continue;
-    Console.WriteLine($"The current value is: {currentValue}");
-} while (currentValue != 7);
+//     if (currentValue >=8) continue;
+//     Console.WriteLine($"The current value is: {currentValue}");
+// } while (currentValue != 7);
 
 // while (currentValue >=3)
 // {
@@ -732,4 +732,34 @@ do {
 //     currentValue = randomValue.Next(1, 10);
 // }
 // Console.WriteLine($"This Number is before 3: {currentValue}");
+
+int heroHealth = 10;
+int monsterHealth = 10;
+
+Random randomValue = new();
+do
+{
+    int heroAttacks = randomValue.Next(1, 11);
+    if (heroAttacks <= 10){
+        monsterHealth -= 1;
+        Console.WriteLine($"Monster was damaged and lost {heroAttacks} health and now has {monsterHealth} health");
+    }
+    if(monsterHealth <= 0){
+        continue;
+    }
+    int monsterAttacks = randomValue.Next(1, 11);
+    if (monsterAttacks <= 10){
+        heroHealth -= 1;
+        Console.WriteLine($"Hero was damaged and lost {monsterAttacks} health and now has {heroHealth} health");
+    }
+    if(heroHealth <= 0){
+        continue;
+    }
+
+
+
+} while (heroHealth > 0 && monsterHealth > 0);
+Console.WriteLine(heroHealth > monsterHealth ? "Hero Wins" : "Monster Wins");
+
+
 
