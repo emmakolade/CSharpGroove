@@ -733,30 +733,52 @@ using System.Security.Cryptography;
 // }
 // Console.WriteLine($"This Number is before 3: {currentValue}");
 
-int heroHealth = 10;
-int monsterHealth = 10;
+// int heroHealth = 10;
+// int monsterHealth = 10;
 
-Random randomValue = new();
-do
-{
-    int attacks = randomValue.Next(1, 11);
-    monsterHealth -= attacks;
-    Console.WriteLine($"Monster was damaged and lost {attacks} health and now has {monsterHealth} health");
-    if(monsterHealth <= 0){
-        continue;
+// Random randomValue = new();
+// do
+// {
+//     int attacks = randomValue.Next(1, 11);
+//     monsterHealth -= attacks;
+//     Console.WriteLine($"Monster was damaged and lost {attacks} health and now has {monsterHealth} health");
+//     if(monsterHealth <= 0){
+//         continue;
+//     }
+//      attacks = randomValue.Next(1, 11);
+
+//     heroHealth -= attacks;
+//     Console.WriteLine($"Hero was damaged and lost {attacks} health and now has {heroHealth} health");
+//     if(heroHealth <= 0){
+//         continue;
+//     }
+
+
+
+// } while (heroHealth > 0 && monsterHealth > 0);
+// Console.WriteLine(heroHealth > monsterHealth ? "Hero Wins" : "Monster Wins");
+
+
+// manage user input
+
+string? readResult;
+bool validEntry = false;
+Console.WriteLine("Enter a string containing at least three characters:");
+int numericValue = 0;
+bool validNumber = false;
+
+do{
+    readResult = Console.ReadLine();
+    validNumber = int.TryParse(readResult, out numericValue);
+
+    if(readResult != null){
+        if(readResult.Length >= 3){
+            validEntry = true;
+        }
+        else{
+            Console.WriteLine("Invalid input, please try again");
+        }
     }
-     attacks = randomValue.Next(1, 11);
-
-    heroHealth -= attacks;
-    Console.WriteLine($"Hero was damaged and lost {attacks} health and now has {heroHealth} health");
-    if(heroHealth <= 0){
-        continue;
-    }
 
 
-
-} while (heroHealth > 0 && monsterHealth > 0);
-Console.WriteLine(heroHealth > monsterHealth ? "Hero Wins" : "Monster Wins");
-
-
-
+}while(validEntry== false);
