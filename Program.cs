@@ -784,3 +784,10 @@ do{
 
 }while(validEntry== false);
 
+
+// project 2: Validates String Input 
+
+
+
+// Console.WriteLine("Choose one of the following code below ");
+
