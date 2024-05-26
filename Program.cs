@@ -767,7 +767,6 @@ Console.WriteLine("Enter a string containing at least three characters:");
 int numericValue = 0;
 bool validNumber = false;
 
-
 do{
     readResult = Console.ReadLine();
     validNumber = int.TryParse(readResult, out numericValue);
