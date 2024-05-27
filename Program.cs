@@ -785,38 +785,60 @@ using System.Security.Cryptography;
 
 
 // project 1: Validates integer Input 
-string? readInput;
-string valueEntered = "";
-bool validInput = false;
-Console.WriteLine("Enter an Integer between 5 and 10 ");
-int convertedToNumber = 0;
-bool isValidNumber = false;
+// string? readInput;
+// string valueEntered = "";
+// bool validInput = false;
+// Console.WriteLine("Enter an Integer between 5 and 10 ");
+// int convertedToNumber = 0;
+// bool isValidNumber = false;
 
 
 
-do{
-    readInput= Console.ReadLine();
-    if(readInput != null){
-        valueEntered = readInput;
-    }
-    isValidNumber =int.TryParse(valueEntered, out convertedToNumber);
+// do{
+//     readInput= Console.ReadLine();
+//     if(readInput != null){
+//         valueEntered = readInput;
+//     }
+//     isValidNumber =int.TryParse(valueEntered, out convertedToNumber);
 
-    if (isValidNumber == true){
-        if(convertedToNumber <= 5 || convertedToNumber >=10 ){
-            validInput = false;
-            Console.WriteLine($"You entered {convertedToNumber}. Please enter a number between 5 and 10.");
-        }
-    }else{
-        Console.WriteLine("Sorry, you entered an invalid number, please try again");
-    }
+//     if (isValidNumber == true){
+//         if(convertedToNumber <= 5 || convertedToNumber >=10 ){
+//             validInput = false;
+//             Console.WriteLine($"You entered {convertedToNumber}. Please enter a number between 5 and 10.");
+//         }
+//     }else{
+//         Console.WriteLine("Sorry, you entered an invalid number, please try again");
+//     }
 
 
-}while(validInput==false);
-Console.WriteLine($"Your input value ({convertedToNumber}) has been accepted.");
+// }while(validInput==false);
+// Console.WriteLine($"Your input value ({convertedToNumber}) has been accepted.");
 
-readInput = Console.ReadLine();
+// readInput = Console.ReadLine();
  
 
 
-// Console.WriteLine("Choose one of the following code below ");
+// project 2 validates input string
+
+string? readInput;
+Console.WriteLine("Enter your role name (Administrator, Manager, or User)");
+bool validInput = false;
+do
+{
+    readInput = Console.ReadLine();
+    if(readInput != null){
+        if (readInput.Trim().Equals("administrator", StringComparison.CurrentCultureIgnoreCase) || readInput.Trim().Equals("manager", StringComparison.CurrentCultureIgnoreCase) || readInput.Trim().Equals("user", StringComparison.CurrentCultureIgnoreCase))
+        {
+            validInput = true;
+            Console.WriteLine($" your input ({readInput}), has been accepeted");
+        }else
+        {
+            Console.WriteLine($" your input ({readInput}), is not valid");
+
+        }
+
+    }
+    
+} while (validInput==false);
+
 
