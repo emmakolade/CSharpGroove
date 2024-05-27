@@ -815,30 +815,63 @@ using System.Security.Cryptography;
 // Console.WriteLine($"Your input value ({convertedToNumber}) has been accepted.");
 
 // readInput = Console.ReadLine();
- 
+
 
 
 // project 2 validates input string
 
-string? readInput;
-Console.WriteLine("Enter your role name (Administrator, Manager, or User)");
-bool validInput = false;
-do
+// string? readInput;
+// Console.WriteLine("Enter your role name (Administrator, Manager, or User)");
+// bool validInput = false;
+// do
+// {
+//     readInput = Console.ReadLine();
+//     if (readInput != null)
+//     {
+//         if (readInput.Trim().Equals("administrator", StringComparison.CurrentCultureIgnoreCase) || readInput.Trim().Equals("manager", StringComparison.CurrentCultureIgnoreCase) || readInput.Trim().Equals("user", StringComparison.CurrentCultureIgnoreCase))
+//         {
+//             validInput = true;
+//             Console.WriteLine($" your input ({readInput}), has been accepeted");
+//         }
+//         else
+//         {
+//             Console.WriteLine($" your input ({readInput}), is not valid");
+
+//         }
+
+//     }
+
+// } while (validInput == false);
+
+
+// project3 
+
+string[] myStrings = ["I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices"];
+int periodLocation = 0;
+string myString = "";
+
+for (int i = 0; i < myString.Length; i++)
 {
-    readInput = Console.ReadLine();
-    if(readInput != null){
-        if (readInput.Trim().Equals("administrator", StringComparison.CurrentCultureIgnoreCase) || readInput.Trim().Equals("manager", StringComparison.CurrentCultureIgnoreCase) || readInput.Trim().Equals("user", StringComparison.CurrentCultureIgnoreCase))
-        {
-            validInput = true;
-            Console.WriteLine($" your input ({readInput}), has been accepeted");
-        }else
-        {
-            Console.WriteLine($" your input ({readInput}), is not valid");
+    myString = myStrings[i];
+    periodLocation = myString.IndexOf(".");
 
-        }
+    string mySentence;
+    while (periodLocation != -1)
+    {
+        // first sentence is the string value to the left of the period location
+        mySentence = myString.Remove(periodLocation);
 
+        // the remainder of myString is the string value to the right of the location
+        myString = myString[(periodLocation + 1)..];
+
+        // remove any leading white-space from myString
+        myString = myString.TrimStart();
+
+        // update the comma location and increment the counter
+        periodLocation = myString.IndexOf(".");
+
+        Console.WriteLine(mySentence);
     }
-    
-} while (validInput==false);
-
-
+    mySentence = myString.Trim();
+    Console.WriteLine(mySentence);
+}
