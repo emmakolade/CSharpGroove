@@ -952,3 +952,9 @@ switch (i)
 
 
 }
+
+do
+{
+    readResult = Console.ReadLine();
+
+} while (menuSelection != "exit");
