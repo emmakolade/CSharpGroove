@@ -982,3 +982,9 @@ Console.WriteLine("this is a floating point types");
 Console.WriteLine($"float    : {float.MinValue}  to {float.MaxValue}");
 Console.WriteLine($"double   : {double.MinValue} to {double.MaxValue}");
 Console.WriteLine($"decimal  : {decimal.MinValue}   to {decimal.MaxValue}");
+
+// refrence types(arrays, classes and strings): they store their values on the heap(a memory area shared across many applications runnin on the OS)
+
+int[] data = [3];
+string shortendWorld = "Hello People";
+Console.WriteLine(shortendWorld);
