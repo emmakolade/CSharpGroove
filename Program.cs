@@ -1,4 +1,5 @@
-﻿
+﻿using System.Globalization;
+CultureInfo.CurrentCulture = new CultureInfo("en-US");
 // string myFirstFriend = "          Akolade        "; 
 // string mySecondFriend = "Emmanuel";
 
@@ -285,11 +286,11 @@ of profgramming languge resources
 
 
 // ForEach
-using System.Diagnostics.CodeAnalysis;
-using System.Net;
-using System.Runtime.CompilerServices;
-using System.Runtime.Serialization;
-using System.Security.Cryptography;
+// using System.Diagnostics.CodeAnalysis;
+// using System.Net;
+// using System.Runtime.CompilerServices;
+// using System.Runtime.Serialization;
+// using System.Security.Cryptography;
 
 // string[] names = ["Rowena", "Robin", "Bao"];
 // foreach(string name in names){
@@ -1031,4 +1032,5 @@ string first = "5";
 string second = "7";
 
 int sum = int.Parse(first) + int.Parse(second);
-Console.WriteLine(sum);
+int res = Convert.ToInt32(first) * Convert.ToInt32(second);
+Console.WriteLine(res);
