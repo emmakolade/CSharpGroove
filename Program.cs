@@ -1021,8 +1021,15 @@ using System.Security.Cryptography;
 // int myInt = (int) myDecimal;
 // Console.WriteLine($"int: {myInt}");
 
-decimal myDecimal  = 1.23456789m;
-float myFloat = (float)myDecimal;
+// decimal myDecimal  = 1.23456789m;
+// float myFloat = (float)myDecimal;
 
-Console.WriteLine($"Decimal: {myDecimal}");
-Console.WriteLine($"Float: {myFloat}");
+// Console.WriteLine($"Decimal: {myDecimal}");
+// Console.WriteLine($"Float: {myFloat}");
+
+string first = "5";
+string second = "7";
+
+
+int sum = int.Parse(first) + int.Parse(second);
+Console.WriteLine(sum);
