@@ -1044,14 +1044,33 @@ of profgramming languge resources
 // Console.WriteLine(value2);
 
 
-string value = "102";
-int result = 0;
-if (int.TryParse(value, out result))
+// string value = "102";
+// int result = 0;
+// if (int.TryParse(value, out result))
+// {
+//    Console.WriteLine($"Measurement: {result}");
+// }
+// else
+// {
+//    Console.WriteLine("Unable to report the measurement.");
+// }
+// Console.WriteLine($"Measurements( W/offset): {50 + result}");
+
+
+string[] values = ["12.3", "45", "ABC", "11", "DEF"];
+
+decimal total = 0m;
+string message = "";
+decimal number = 0;
+foreach (var item in values)
 {
-   Console.WriteLine($"Measurement: {result}");
+    if (decimal.TryParse(item, out number)){
+        total += number;
+    }else{
+        message += item;
+    }
+    
 }
-else
-{
-   Console.WriteLine("Unable to report the measurement.");
-}
-Console.WriteLine($"Measurements( W/offset): {50 + result}");
+
+Console.WriteLine($"AlphabeticMessage: {message}");
+Console.WriteLine($"Total:{total}");
