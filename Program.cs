@@ -1054,3 +1054,4 @@ else
 {
    Console.WriteLine("Unable to report the measurement.");
 }
+Console.WriteLine($"Measurements( W/offset): {50 + result}");
