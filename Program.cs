@@ -1023,11 +1023,11 @@ of profgramming languge resources
 // int myInt = (int) myDecimal;
 // Console.WriteLine($"int: {myInt}");
 
-// decimal myDecimal  = 1.23456789m;
-// float myFloat = (float)myDecimal;
+decimal myDecimal  = 1.23456789m;
+float myFloat = (float)myDecimal;
 
-// Console.WriteLine($"Decimal: {myDecimal}");
-// Console.WriteLine($"Float: {myFloat}");
+Console.WriteLine($"Decimal: {myDecimal}");
+Console.WriteLine($"Float: {myFloat}");
 
 // string first = "5";
 // string second = "7";
@@ -1057,20 +1057,33 @@ of profgramming languge resources
 // Console.WriteLine($"Measurements( W/offset): {50 + result}");
 
 
-string[] values = ["12.3", "45", "ABC", "11", "DEF"];
+// string[] values = ["12.3", "45", "ABC", "11", "DEF"];
 
-decimal total = 0m;
-string message = "";
-decimal number = 0;
-foreach (var item in values)
-{
-    if (decimal.TryParse(item, out number)){
-        total += number;
-    }else{
-        message += item;
-    }
+// decimal total = 0m;
+// string message = "";
+// decimal number = 0;
+// foreach (var item in values)
+// {
+//     if (decimal.TryParse(item, out number)){
+//         total += number;
+//     }else{
+//         message += item;
+//     }
     
-}
+// }
 
-Console.WriteLine($"AlphabeticMessage: {message}");
-Console.WriteLine($"Total:{total}");
+// Console.WriteLine($"AlphabeticMessage: {message}");
+// Console.WriteLine($"Total:{total}");
+
+
+int val1 = 11;
+decimal val2 = 6.2m;
+float val3 = 4.3f;
+int result1 =Convert.ToInt32(val1 / val2);
+Console.WriteLine($"Divide value1 by value2, display the result as an int: {result1}");
+
+decimal result2 = val2 / (decimal)val3;
+Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
+
+float result3 = val3 / val1;
+Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
