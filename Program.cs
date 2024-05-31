@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Runtime.CompilerServices;
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
 // string myFirstFriend = "          Akolade        "; 
 // string mySecondFriend = "Emmanuel";
@@ -1028,9 +1029,28 @@ of profgramming languge resources
 // Console.WriteLine($"Decimal: {myDecimal}");
 // Console.WriteLine($"Float: {myFloat}");
 
-string first = "5";
-string second = "7";
+// string first = "5";
+// string second = "7";
 
-int sum = int.Parse(first) + int.Parse(second);
-int res = Convert.ToInt32(first) * Convert.ToInt32(second);
-Console.WriteLine(res);
+// int sum = int.Parse(first) + int.Parse(second);
+// int res = Convert.ToInt32(first) * Convert.ToInt32(second);
+// Console.WriteLine(res);
+
+
+// int value = (int)1.5m;// casting truncates
+// Console.WriteLine(value);
+
+// int value2 = Convert.ToInt32(1.5m); // converting rounds up
+// Console.WriteLine(value2);
+
+
+string value = "102";
+int result = 0;
+if (int.TryParse(value, out result))
+{
+   Console.WriteLine($"Measurement: {result}");
+}
+else
+{
+   Console.WriteLine("Unable to report the measurement.");
+}
