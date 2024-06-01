@@ -1136,15 +1136,31 @@ of profgramming languge resources
 //     Console.WriteLine($"-- {pallet}");
 // }
 
-string val = "abc123";
-char[] valueArray = val.ToCharArray();
-Array.Reverse(valueArray);
-// string res = new(valueArray);
-string res = String.Join("-", valueArray);
-Console.WriteLine(res);
+// string val = "abc123";
+// char[] valueArray = val.ToCharArray();
+// Array.Reverse(valueArray);
+// // string res = new(valueArray);
+// string res = String.Join("-", valueArray);
+// Console.WriteLine(res);
 
-string[] items = res.Split("-");
-foreach (string item in items)
-{
-    Console.WriteLine(item);
+// string[] items = res.Split("-");
+// foreach (string item in items)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+string pangram = "The quick brown fox jumps over the lazy dog";
+string[] message = pangram.Split(' ');
+string[] newMessage = new string[message.Length];
+
+for (int i = 0; i < message.Length; i++){
+    char[] letters = message[i].ToCharArray();
+    Array.Reverse(letters);
+    newMessage[i] = new(letters);
 }
+string result = String.Join(" ", newMessage);
+Console.WriteLine(result);
+
+
+
