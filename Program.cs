@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
+using System.Runtime.ExceptionServices;
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
 // string myFirstFriend = "          Akolade        "; 
 // string mySecondFriend = "Emmanuel";
@@ -1150,17 +1151,30 @@ of profgramming languge resources
 // }
 
 
-string pangram = "The quick brown fox jumps over the lazy dog";
-string[] message = pangram.Split(' ');
-string[] newMessage = new string[message.Length];
+// string pangram = "The quick brown fox jumps over the lazy dog";
+// string[] message = pangram.Split(' ');
+// string[] newMessage = new string[message.Length];
 
-for (int i = 0; i < message.Length; i++){
-    char[] letters = message[i].ToCharArray();
-    Array.Reverse(letters);
-    newMessage[i] = new(letters);
+// for (int i = 0; i < message.Length; i++){
+//     char[] letters = message[i].ToCharArray();
+//     Array.Reverse(letters);
+//     newMessage[i] = new(letters);
+// }
+// string result = String.Join(" ", newMessage);
+// Console.WriteLine(result);
+
+
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] parsedIDs = orderStream.Split(",");
+Array.Sort(parsedIDs);
+
+foreach (var parsedID in parsedIDs)
+{
+    if(parsedID.Length == 4){
+        Console.WriteLine(parsedID);
+    }
+    else
+    {
+        Console.WriteLine(parsedID + "\t- Error");
+    }
 }
-string result = String.Join(" ", newMessage);
-Console.WriteLine(result);
-
-
-
