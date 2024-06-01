@@ -1023,7 +1023,7 @@ of profgramming languge resources
 // int myInt = (int) myDecimal;
 // Console.WriteLine($"int: {myInt}");
 
-decimal myDecimal  = 1.23456789m;
+decimal myDecimal = 1.23456789m;
 float myFloat = (float)myDecimal;
 
 Console.WriteLine($"Decimal: {myDecimal}");
@@ -1069,21 +1069,34 @@ Console.WriteLine($"Float: {myFloat}");
 //     }else{
 //         message += item;
 //     }
-    
+
 // }
 
 // Console.WriteLine($"AlphabeticMessage: {message}");
 // Console.WriteLine($"Total:{total}");
 
 
-int val1 = 11;
-decimal val2 = 6.2m;
-float val3 = 4.3f;
-int result1 =Convert.ToInt32(val1 / val2);
-Console.WriteLine($"Divide value1 by value2, display the result as an int: {result1}");
+// int val1 = 11;
+// decimal val2 = 6.2m;
+// float val3 = 4.3f;
+// int result1 =Convert.ToInt32(val1 / val2);
+// Console.WriteLine($"Divide value1 by value2, display the result as an int: {result1}");
 
-decimal result2 = val2 / (decimal)val3;
-Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
+// decimal result2 = val2 / (decimal)val3;
+// Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
 
-float result3 = val3 / val1;
-Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
+// float result3 = val3 / val1;
+// Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
+
+
+
+string[] pallets = ["B14", "A11", "B12", "A13"];
+
+
+Console.WriteLine("Sorted Pallets...");
+
+Array.Sort(pallets);
+foreach (var pallet in pallets)
+{
+    Console.WriteLine($"-- {pallet}");
+}
