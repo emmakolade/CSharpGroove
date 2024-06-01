@@ -1164,17 +1164,17 @@ of profgramming languge resources
 // Console.WriteLine(result);
 
 
-string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
-string[] parsedIDs = orderStream.Split(",");
-Array.Sort(parsedIDs);
+// string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+// string[] parsedIDs = orderStream.Split(",");
+// Array.Sort(parsedIDs);
 
-foreach (var parsedID in parsedIDs)
-{
-    if(parsedID.Length == 4){
-        Console.WriteLine(parsedID);
-    }
-    else
-    {
-        Console.WriteLine(parsedID + "\t- Error");
-    }
-}
+// foreach (var parsedID in parsedIDs)
+// {
+//     if(parsedID.Length == 4){
+//         Console.WriteLine(parsedID);
+//     }
+//     else
+//     {
+//         Console.WriteLine(parsedID + "\t- Error");
+//     }
+// }
