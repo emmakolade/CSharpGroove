@@ -1090,21 +1090,29 @@ Console.WriteLine($"Float: {myFloat}");
 
 
 
+// string[] pallets = ["B14", "A11", "B12", "A13"];
+
+
+// Console.WriteLine("Sorted Pallets...");
+
+// Array.Sort(pallets);
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
+// Console.WriteLine("");
+// Console.WriteLine("Reversed Pallets...");
+
+// Array.Reverse(pallets);
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 string[] pallets = ["B14", "A11", "B12", "A13"];
-
-
-Console.WriteLine("Sorted Pallets...");
-
-Array.Sort(pallets);
-foreach (var pallet in pallets)
-{
-    Console.WriteLine($"-- {pallet}");
-}
 Console.WriteLine("");
-Console.WriteLine("Reversed Pallets...");
 
-Array.Reverse(pallets);
-foreach (var pallet in pallets)
-{
+Array.Clear(pallets, 0, 2);
+Console.WriteLine($"Clearing two Pallets..... count:{pallets.Length}");
+foreach(var pallet in pallets){
     Console.WriteLine($"-- {pallet}");
 }
