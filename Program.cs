@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
 // string myFirstFriend = "          Akolade        "; 
@@ -1023,11 +1024,11 @@ of profgramming languge resources
 // int myInt = (int) myDecimal;
 // Console.WriteLine($"int: {myInt}");
 
-decimal myDecimal = 1.23456789m;
-float myFloat = (float)myDecimal;
+// decimal myDecimal = 1.23456789m;
+// float myFloat = (float)myDecimal;
 
-Console.WriteLine($"Decimal: {myDecimal}");
-Console.WriteLine($"Float: {myFloat}");
+// Console.WriteLine($"Decimal: {myDecimal}");
+// Console.WriteLine($"Float: {myFloat}");
 
 // string first = "5";
 // string second = "7";
@@ -1108,29 +1109,42 @@ Console.WriteLine($"Float: {myFloat}");
 // {
 //     Console.WriteLine($"-- {pallet}");
 // }
-string[] pallets = ["B14", "A11", "B12", "A13"];
-Console.WriteLine("");
+// string[] pallets = ["B14", "A11", "B12", "A13"];
+// Console.WriteLine("");
 
-Array.Clear(pallets, 0, 2);
-Console.WriteLine($"Clearing 2 Pallets..... count:{pallets.Length} pallets");
-foreach(var pallet in pallets){
-    Console.WriteLine($"-- {pallet}");
-}
-Console.WriteLine("");
-Array.Resize(ref pallets, 6);
-Console.WriteLine($"Resizing 6 ... count: {pallets.Length}");
+// Array.Clear(pallets, 0, 2);
+// Console.WriteLine($"Clearing 2 Pallets..... count:{pallets.Length} pallets");
+// foreach(var pallet in pallets){
+//     Console.WriteLine($"-- {pallet}");
+// }
+// Console.WriteLine("");
+// Array.Resize(ref pallets, 6);
+// Console.WriteLine($"Resizing 6 ... count: {pallets.Length}");
 
-pallets[4] = "C01";
-pallets[5] = "C02";
+// pallets[4] = "C01";
+// pallets[5] = "C02";
 
-foreach(var pallet in pallets){
-    Console.WriteLine($"{pallet}");
-}
-Console.WriteLine("");
-Array.Resize(ref pallets, 3);
-Console.WriteLine($"Resizing 3 ... count: {pallets.Length}");
+// foreach(var pallet in pallets){
+//     Console.WriteLine($"{pallet}");
+// }
+// Console.WriteLine("");
+// Array.Resize(ref pallets, 3);
+// Console.WriteLine($"Resizing 3 ... count: {pallets.Length}");
 
-foreach (var pallet in pallets)
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
+
+string val = "abc123";
+char[] valueArray = val.ToCharArray();
+Array.Reverse(valueArray);
+// string res = new(valueArray);
+string res = String.Join("-", valueArray);
+Console.WriteLine(res);
+
+string[] items = res.Split("-");
+foreach (string item in items)
 {
-    Console.WriteLine($"-- {pallet}");
+    Console.WriteLine(item);
 }
