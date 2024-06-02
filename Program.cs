@@ -1202,9 +1202,14 @@ of profgramming languge resources
 // Console.WriteLine($" Measurement: {measurement:N5} units");
 
 // formatting percentages
-decimal tax = 0.36785m;
-Console.WriteLine($" Tax rate is: {tax:P2}");
+// decimal tax = 0.36785m;
+// Console.WriteLine($" Tax rate is: {tax:P2}");
 
+decimal price = 67.55m;
+decimal salePrice = 59.99m;
+
+string yourDiscount = String.Format("you save {0:c2} off the regular {1:C2} price", (price - salePrice), price);
+Console.WriteLine(yourDiscount);
 
 
 
