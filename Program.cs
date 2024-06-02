@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
+using System.Security.Cryptography;
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
 // string myFirstFriend = "          Akolade        "; 
 // string mySecondFriend = "Emmanuel";
@@ -1205,15 +1206,29 @@ of profgramming languge resources
 // decimal tax = 0.36785m;
 // Console.WriteLine($" Tax rate is: {tax:P2}");
 
-decimal price = 67.55m;
-decimal salePrice = 59.99m;
+// decimal price = 67.55m;
+// decimal salePrice = 59.99m;
 
-string yourDiscount = String.Format("you save {0:c2} off the regular {1:C2} price", (price - salePrice), price);
-Console.WriteLine(yourDiscount);
+// string yourDiscount = String.Format("you save {0:c2} off the regular {1:C2} price. ", (price - salePrice), price);
+// yourDiscount += $"A discount of {((price - salePrice)/price):P2}";
+// Console.WriteLine(yourDiscount);
+
+// // display invoice number 
+// int invoiceNumber = 1201;
+// decimal productShares = 25.4568m;
+// decimal subtotal = 2750.00m;
+// decimal taxPercentage = .15825m;
+// decimal total = 3185.19m;
+
+// Console.WriteLine($"Invoice Number: {invoiceNumber}");
+// Console.WriteLine($"    Shrare: {productShares:P3} Product ");
+// Console.WriteLine($"        SubTotal: {subtotal:C}");
+// Console.WriteLine($"Total : {total:C}");
 
 
-
-
+// padding and alignment
+string input = "Padding";
+Console.WriteLine(input.PadLeft(24));
 
 
 
