@@ -1245,51 +1245,65 @@ of profgramming languge resources
 
 
 // Apply String Interpolation to form a letter 
-string customerName = "Ms. Barros";
+// string customerName = "Ms. Barros";
 
-string currentProduct = "Magic Yield";
-int currentShares = 2975000;
-decimal currentReturn = 0.1275m;
-decimal currentProfit = 55000000.0m;
+// string currentProduct = "Magic Yield";
+// int currentShares = 2975000;
+// decimal currentReturn = 0.1275m;
+// decimal currentProfit = 55000000.0m;
 
-string newProduct = "Glorious Future";
-decimal newReturn = 0.13125m;
-decimal newProfit = 63000000.0m;
-string slauteCustomer  = "Dear ";
+// string newProduct = "Glorious Future";
+// decimal newReturn = 0.13125m;
+// decimal newProfit = 63000000.0m;
+// string slauteCustomer  = "Dear ";
 
-string sendLetter= "";
-sendLetter += slauteCustomer;
-sendLetter += customerName;
-sendLetter += "\n";
-sendLetter += $"As a customer of our{currentProduct} we are excited to tell you about a new financial product that would dramatically increase your return.\n";
-sendLetter += $"Currently, you own {currentShares:N} share at a return of {currentReturn:P2}.\n";
-sendLetter += $"Our new product, {newProduct} offers a return of {newReturn:P2}. ";
-sendLetter += $"Given your current volume, your potential profit would be {newProfit:C}";
+// string sendLetter= "";
+// sendLetter += slauteCustomer;
+// sendLetter += customerName;
+// sendLetter += "\n";
+// sendLetter += $"As a customer of our{currentProduct} we are excited to tell you about a new financial product that would dramatically increase your return.\n";
+// sendLetter += $"Currently, you own {currentShares:N} share at a return of {currentReturn:P2}.\n";
+// sendLetter += $"Our new product, {newProduct} offers a return of {newReturn:P2}. ";
+// sendLetter += $"Given your current volume, your potential profit would be {newProfit:C}";
 
-Console.WriteLine(sendLetter);
-Console.WriteLine("Here's a quick comparison:\n");
+// Console.WriteLine(sendLetter);
+// Console.WriteLine("Here's a quick comparison:\n");
 
-string comparisonMessage = "";
-comparisonMessage += currentProduct.PadRight(20);
-comparisonMessage += $"{currentReturn:P2}".PadRight(10);
-comparisonMessage += $"{currentProfit:C}\n".PadRight(10);
-comparisonMessage += newProduct.PadRight(20);
+// string comparisonMessage = "";
+// comparisonMessage += currentProduct.PadRight(20);
+// comparisonMessage += $"{currentReturn:P2}".PadRight(10);
+// comparisonMessage += $"{currentProfit:C}\n".PadRight(10);
+// comparisonMessage += newProduct.PadRight(20);
 
-comparisonMessage += $"{newReturn:P2}".PadRight(10);
-comparisonMessage += $"{newProfit:C}\n".PadRight(10);
-
-
-Console.WriteLine(comparisonMessage);
+// comparisonMessage += $"{newReturn:P2}".PadRight(10);
+// comparisonMessage += $"{newProfit:C}\n".PadRight(10);
+// Console.WriteLine(comparisonMessage);
 
 
 
 
+// indexOf() and Substring()
 
+// string message = "Find what is (inside the parentheses)";
 
+// int openingPosition = message.IndexOf('(');
+// int closingPosition = message.IndexOf(')');
+// openingPosition += 1;
 
+// Console.WriteLine(openingPosition);
+// Console.WriteLine(closingPosition);
 
+// int length = closingPosition - openingPosition;
+// Console.WriteLine(message.Substring(openingPosition,length));
 
+string message = "What is the value <span>between the tags</span>?";
 
+int openingPosition = message.IndexOf("<span>");
+int closingPosition = message.IndexOf("</span>");
+
+openingPosition += 6;
+int length = closingPosition - openingPosition;
+Console.WriteLine(message.Substring(openingPosition, length));
 
 
 
