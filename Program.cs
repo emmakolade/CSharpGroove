@@ -1228,7 +1228,9 @@ of profgramming languge resources
 
 // padding and alignment
 string input = "Padding";
-Console.WriteLine(input.PadLeft(24));
+Console.WriteLine(input.PadLeft(12, '-'));
+// overloaded method: method eith with different or extea arguments
+Console.WriteLine(input.PadLeft(12, '-'));
 
 
 
