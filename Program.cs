@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
@@ -1178,3 +1179,40 @@ of profgramming languge resources
 //         Console.WriteLine(parsedID + "\t- Error");
 //     }
 // }
+
+//composite formatting: 
+
+string first = "Hello";
+string second = "World";
+string result = string.Format("{0} {0} {1}", first, second);
+Console.WriteLine(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
