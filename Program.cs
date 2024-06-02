@@ -1187,6 +1187,10 @@ string second = "World";
 string result = string.Format("{0} {0} {1}", first, second);
 Console.WriteLine(result);
 
+// string interpolation: used to simplify composite formatting
+Console.WriteLine($"{first} {second}!");
+Console.WriteLine($"{second} {first}!");
+Console.WriteLine($"{first} {first} {first}!");
 
 
 
