@@ -1182,19 +1182,28 @@ of profgramming languge resources
 
 //composite formatting: 
 
-string first = "Hello";
-string second = "World";
-string result = string.Format("{0} {0} {1}", first, second);
-Console.WriteLine(result);
+// string first = "Hello";
+// string second = "World";
+// string result = string.Format("{0} {0} {1}", first, second);
+// Console.WriteLine(result);
 
-// string interpolation: used to simplify composite formatting
-Console.WriteLine($"{first} {second}!");
-Console.WriteLine($"{second} {first}!");
-Console.WriteLine($"{first} {first} {first}!");
+// // string interpolation: used to simplify composite formatting
+// Console.WriteLine($"{first} {second}!");
+// Console.WriteLine($"{second} {first}!");
+// Console.WriteLine($"{first} {first} {first}!");
 
+// // formatting currency
+// decimal price = 123.45m;
+// int discount = 50;
+// Console.WriteLine($"{price:C} (sav {discount:C})");
 
+// // formatting numbers
+// decimal measurement = 123456.78912m;
+// Console.WriteLine($" Measurement: {measurement:N5} units");
 
-
+// formatting percentages
+decimal tax = 0.36785m;
+Console.WriteLine($" Tax rate is: {tax:P2}");
 
 
 
