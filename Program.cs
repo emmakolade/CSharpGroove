@@ -1395,14 +1395,33 @@ of profgramming languge resources
 // Console.WriteLine(message);
 
 // replace and remove value for data
-const string input =  "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
 string quantity = "";
-quantity = input.Replace("</span></div>", "");
-quantity = input.Replace("<div><h2>", "");
 string output = "";
 
 // Your work here
+const string openSpan = "<span>";
+const string closeSpan = "</span>";
+
+int quantityStart = input.IndexOf(openSpan) + openSpan.Length; //
+int quantityEnd = input.IndexOf(closeSpan);
+int quantityLength = quantityEnd - quantityStart;
+quantity = input.Substring(quantityStart, quantityLength);
+quantity = $"Quantity: {quantity}";
+
+const string tradeSymbol = "&trade";
+const string regSymbol = "&reg;";
+output = input.Replace(tradeSymbol, regSymbol);
+
+
+const string openingDiv = "<div>";
+int divStart = output.IndexOf(openingDiv);
+output = output.Remove(divStart, openingDiv.Length);
+
+const string closingDiv = "</div>";
+int divCloseStart = output.IndexOf(closingDiv);
+output = $"Output: {output.Remove(divCloseStart, closingDiv.Length)}";
 
 Console.WriteLine(quantity);
 Console.WriteLine(output);
