@@ -1384,13 +1384,25 @@ of profgramming languge resources
 // Console.WriteLine($"Fount with using startPosition {startPosition}: {message[openingPosition..]}");
 
 // remove and replace 
-string data = "12345John Smith          5000 3 ";
+// string data = "12345John Smith          5000 3 ";
 
-string updateData = data.Remove(5, 20);
-Console.WriteLine(updateData);
+// string updateData = data.Remove(5, 20);
+// Console.WriteLine(updateData);
 
-string message = "This--is--ex-amp-le--da-ta";
-message = message.Replace("--", " ");
-message = message.Replace("-", "");
-Console.WriteLine(message);
+// string message = "This--is--ex-amp-le--da-ta";
+// message = message.Replace("--", " ");
+// message = message.Replace("-", "");
+// Console.WriteLine(message);
 
+// replace and remove value for data
+const string input =  "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+string quantity = "";
+quantity = input.Replace("</span></div>", "");
+quantity = input.Replace("<div><h2>", "");
+string output = "";
+
+// Your work here
+
+Console.WriteLine(quantity);
+Console.WriteLine(output);
