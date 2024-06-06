@@ -1509,7 +1509,7 @@ of profgramming languge resources
 //     ourAnimals[i, 3] = "Nickname: " + animalNickname;
 //     ourAnimals[i, 4] = "Physical description: " + animalPhysicalDescription;
 //     ourAnimals[i, 5] = "Personality: " + animalPersonalityDescription;
-    
+
 //     if (!decimal.TryParse(suggestedDonation, out decimalDonation))
 //     {
 //         decimalDonation = 45.00m; // if suggestedDonation NOT a number, default to 45.00
@@ -1614,7 +1614,7 @@ of profgramming languge resources
 //                                     Console.Write($"\rsearching our dog {ourAnimals[i, 3]} for {term.Trim()} {icon} {j.ToString()}");
 //                                     Thread.Sleep(100);
 //                                 }
-                                
+
 //                                 Console.Write($"\r{new String(' ', Console.BufferWidth)}");
 //                             }
 
@@ -1630,7 +1630,7 @@ of profgramming languge resources
 //                             }
 //                         }
 //                     }
-                    
+
 //                     // #3d if the current dog is match, display the dog's info
 //                     if (matchesCurrentDog)
 //                     {
@@ -1694,14 +1694,17 @@ foreach (var t in times)
 {
     string time = t.ToString();
     int len = time.Length;
-    
-    if(len >= 3){
+
+    if (len >= 3)
+    {
         time = time.Insert(len - 2, ":");
     }
-    else if (len == 2){
+    else if (len == 2)
+    {
         time = time.Insert(0, "0");
     }
-    else{
+    else
+    {
         time = time.Insert(0, "0:0");
     }
     Console.Write($"{time} ");
@@ -1709,21 +1712,25 @@ foreach (var t in times)
 Console.WriteLine();
 
 Console.WriteLine("Enter new GMT");
-int newGMT= Convert.ToInt32(Console.ReadLine());
+int newGMT = Convert.ToInt32(Console.ReadLine());
 
-if (Math.Abs(newGMT) > 12 || Math.Abs(currentGMT) > 12){
+if (Math.Abs(newGMT) > 12 || Math.Abs(currentGMT) > 12)
+{
     Console.WriteLine("Invalid GMT");
 }
-else if (newGMT <= 0 && currentGMT <= 0 || newGMT >= 0 && currentGMT >= 0){
+else if (newGMT <= 0 && currentGMT <= 0 || newGMT >= 0 && currentGMT >= 0)
+{
     diff = 100 * (Math.Abs(newGMT) - Math.Abs(currentGMT));
     /* Adjust the times by adding the difference, keeping the value within 24 hours */
-    for(int i = 0; i < times.Length; i++){
+    for (int i = 0; i < times.Length; i++)
+    {
         times[i] = ((times[i] + diff)) % 2400;
     }
 }
-else{
-    diff = 100 * ( Math.Abs(newGMT) + Math.Abs(currentGMT));
-    for (int i = 0; i < times.Length; i++) 
+else
+{
+    diff = 100 * (Math.Abs(newGMT) + Math.Abs(currentGMT));
+    for (int i = 0; i < times.Length; i++)
     {
         times[i] = ((times[i] + diff)) % 2400;
     }
@@ -1734,7 +1741,7 @@ foreach (var item in times)
 {
     string time = item.ToString();
     int len = time.Length;
-    if(len>3)
+    if (len > 3)
     {
         time = time.Insert(len - 2, ":");
     }
