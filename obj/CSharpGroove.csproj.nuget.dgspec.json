@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\CSharpGroove.csproj": {}
+    "C:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\CSharpGroove.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\CSharpGroove.csproj": {
+    "C:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\CSharpGroove.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\CSharpGroove.csproj",
+        "projectUniqueName": "C:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\CSharpGroove.csproj",
         "projectName": "CSharpGroove",
-        "projectPath": "c:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\CSharpGroove.csproj",
+        "projectPath": "C:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\CSharpGroove.csproj",
         "packagesPath": "C:\\Users\\Ak\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\obj\\",
+        "outputPath": "C:\\Users\\Ak\\Desktop\\Proj\\CSharpGroove\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ak\\AppData\\Roaming\\NuGet\\NuGet.Config"
