@@ -1880,15 +1880,53 @@ of profgramming languge resources
 
 // Understand Methods Scope
 
-string[] students = ["Jenna", "Ayesha", "Carlos", "Viktor"];
-DisplayStudents(students);
-DisplayStudents(["Robert","Vanya"]);
+// string[] students = ["Jenna", "Ayesha", "Carlos", "Viktor"];
+// DisplayStudents(students);
+// DisplayStudents(["Robert","Vanya"]);
 
-static void DisplayStudents(string[] students){
-    foreach (var student in students)
-    {
-        Console.Write($"{student}, ");
+// static void DisplayStudents(string[] students){
+//     foreach (var student in students)
+//     {
+//         Console.Write($"{student}, ");
+//     }
+//     Console.WriteLine();
+// }
 
-    }
-    Console.WriteLine();
+// double pi = 3.14159;
+
+// PrintCircleArea(radius: 10);
+// PrintCirleCircumference(radius: 10);
+// void PrintCircleArea(int radius)
+// {
+//     double area = pi * (radius * radius);
+//     Console.WriteLine($"Area of Circle= {area}");
+// }
+
+// void PrintCirleCircumference(int radius)
+// {
+//     double circumference = 2 * pi * radius;
+//     Console.WriteLine($"Circumference of Circle = {circumference}");
+// }
+// PrintCircleInfo(12);
+// PrintCircleInfo(24);
+// void PrintCircleInfo(int radius)
+// {
+//     Console.WriteLine($"This is a Circle with Radius: {radius}");
+//     PrintCircleArea(radius: 10);
+//     PrintCirleCircumference(radius: 10);
+// }
+
+
+int a = 3;
+int b = 4;
+int c = 0;
+
+Multiply(a, b, c);
+Console.WriteLine($"global statement: {a} x {b} = {c}");
+
+static void Multiply(int a, int b, int c) 
+{
+    c = a * b;
+    Console.WriteLine($"inside Multiply method: {a} x {b} = {c}");
 }
+
