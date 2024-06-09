@@ -1952,43 +1952,77 @@ of profgramming languge resources
 
 // METHODS WITH OPTIONAL PARAMETERS
 
-string[] guestList = ["Rebecca", "Nadia", "Noor", "Jonte"];
-string[] rsvps = new string[10];
-int count = 0;
+// string[] guestList = ["Rebecca", "Nadia", "Noor", "Jonte"];
+// string[] rsvps = new string[10];
+// int count = 0;
 
-RSVP(name:"Rebecca", 1, "none", true);
-RSVP(name:"Nadia", 2, "Bread", true);
-RSVP(name:"Linh", 2, "none", false);
-RSVP(name:"Tony", 1, "Nuts", true);
-RSVP(name:"Noor", 4, "none", false);
-RSVP(name:"Jonte", 4, "none", false);
-ShowRSVPs();
-void RSVP(string name, int partySize, string allergies, bool inviteOnly)
+// RSVP(name:"Rebecca", 1, "none", true);
+// RSVP(name:"Nadia", 2, "Bread", true);
+// RSVP(name:"Linh", 2, "none", false);
+// RSVP(name:"Tony", 1, "Nuts", true);
+// RSVP(name:"Noor", 4, "none", false);
+// RSVP(name:"Jonte", 4, "none", false);
+// ShowRSVPs();
+// void RSVP(string name, int partySize, string allergies, bool inviteOnly)
+// {
+//     if (inviteOnly)
+//     {
+//         bool found = false;
+//         foreach (string guest in guestList)
+//         {
+//             if(guest.Equals(name)){
+//                 found = true;
+//                 break;
+//             }
+//         }
+//         if(!found){
+//             Console.WriteLine($"Sorry, {name} is not on the guest list");
+//             return;
+//         }
+//     }
+//     rsvps[count] = $"Name: {name}, \tParty Size: {partySize}, \tAllergies: {allergies}";
+//     count++;
+// }
+
+// void ShowRSVPs()
+// {
+//     Console.WriteLine("\nTotal RSVPs:");
+//     for (int i = 0; i < count; i++)
+//     {
+//         Console.WriteLine(rsvps[i]);
+//     }
+// }
+
+string[,] corporate = 
 {
-    if (inviteOnly)
-    {
-        bool found = false;
-        foreach (string guest in guestList)
-        {
-            if(guest.Equals(name)){
-                found = true;
-                break;
-            }
-        }
-        if(!found){
-            Console.WriteLine($"Sorry, {name} is not on the guest list");
-            return;
-        }
-    }
-    rsvps[count] = $"Name: {name}, \tParty Size: {partySize}, \tAllergies: {allergies}";
-    count++;
+    {"Robert", "Bavin"}, {"Simon", "Bright"},
+    {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+    {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
+};
+
+string[,] external = 
+{
+    {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+    {"Shay", "Lawrence"}, {"Daren", "Valdes"}
+};
+string externalDomain = "hayworth.com";
+
+
+for (int i = 0; i < corporate.GetLength(0); i++) 
+{
+    DisplayEmail(first: corporate[i,0], last: corporate[i,1]);
 }
 
-void ShowRSVPs()
+for (int i = 0; i < external.GetLength(0); i++) 
 {
-    Console.WriteLine("\nTotal RSVPs:");
-    for (int i = 0; i < count; i++)
-    {
-        Console.WriteLine(rsvps[i]);
-    }
+    DisplayEmail(first: external[i,0], last: external[i,1], domain: externalDomain);
+
+}
+
+
+void DisplayEmail(string first, string last, string domain="contoso.com"){
+    string email= first[..2] + last;
+    // string email= first.Substring(0,2) + last;
+    email = email.ToLower();
+    Console.WriteLine($"{email}@{domain}");
 }
