@@ -2069,10 +2069,70 @@ double usd = 23.73;
 int vnd = UsdToVnd(usd);
 Console.WriteLine($"${usd}  USD = ${vnd} VND");
 
-int UsdToVnd(double usd){
+static int UsdToVnd(double usd)
+{
     int rate = 23500;
     return (int)(rate * usd);
 }
+Console.WriteLine($"${vnd} VND = ${VndToUsd(vnd)} USD");
+
+static double VndToUsd(int vnd)
+{
+    double rate = 23500;
+    return vnd / rate;
+}
+
+Console.WriteLine(ReverseWord(word: "snake"));
+static string ReverseWord(string word)
+{
+    string result = "";
+    for (int i = word.Length - 1; i >= 0; i--)
+    {
+        result += word[i];
+    }
+    return result;
+}
+
+
+Console.WriteLine(ReverseSentence(sentence: "there are snakes at the zoo"));
+string ReverseSentence(string sentence)
+{
+    string result = "";
+    string[] words = sentence.Split(" ");
+
+    foreach (string word in words)
+    {
+        result += ReverseWord(word: word) + " ";
+    }
+    return result.Trim();
+}
+
+
+// RETURN BOOL FROM METHODS
+string[] words = { "racecar", "talented", "deified", "tent", "tenet" };
+Console.WriteLine("Is it a palindrome?");
+
+foreach (string word in words)
+{
+    Console.WriteLine($"{word}: {IsPalindrome(word)}");
+}
+
+bool IsPalindrome(string word)
+{
+    int start = 0;
+    int end = word.Length - 1;
+    while (start < end)
+    {
+        if (word[start] != word[end])
+        {
+            return false;
+        }
+        start++;
+        end--;
+    }
+    return true;
+}
+
 
 
 
