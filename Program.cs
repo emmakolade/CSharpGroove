@@ -2212,31 +2212,31 @@ int[,] TwoCoins(int[] coins, int target)
 }
 
 // game challenge
-Random random = new Random();
+// Random random = new Random();
 
-Console.WriteLine("Would you like to play? (Y/N)");
-if (ShouldPlay()) 
-{
-    PlayGame();
-}
+// Console.WriteLine("Would you like to play? (Y/N)");
+// if (ShouldPlay()) 
+// {
+//     PlayGame();
+// }
 
-void PlayGame() 
-{
-    var play = true;
+// void PlayGame() 
+// {
+//     var play = true;
 
-    while (play) 
-    {
-        var target;
-        var roll;
+//     while (play) 
+//     {
+//         var target;
+//         var roll;
 
-        Console.WriteLine($"Roll a number greater than {target} to win!");
-        Console.WriteLine($"You rolled a {roll}");
-        Console.WriteLine(WinOrLose());
-        Console.WriteLine("\nPlay again? (Y/N)");
+//         Console.WriteLine($"Roll a number greater than {target} to win!");
+//         Console.WriteLine($"You rolled a {roll}");
+//         Console.WriteLine(WinOrLose());
+//         Console.WriteLine("\nPlay again? (Y/N)");
 
-        play = ShouldPlay();
-    }
-}
+//         play = ShouldPlay();
+//     }
+// }
 
 
 
