@@ -2065,48 +2065,48 @@ of profgramming languge resources
 
 
 
-// RETURN NUMBERS FROM METHODS
-double usd = 23.73;
-int vnd = UsdToVnd(usd);
-Console.WriteLine($"${usd}  USD = ${vnd} VND");
+// // RETURN NUMBERS FROM METHODS
+// double usd = 23.73;
+// int vnd = UsdToVnd(usd);
+// Console.WriteLine($"${usd}  USD = ${vnd} VND");
 
-static int UsdToVnd(double usd)
-{
-    int rate = 23500;
-    return (int)(rate * usd);
-}
-Console.WriteLine($"${vnd} VND = ${VndToUsd(vnd)} USD");
+// static int UsdToVnd(double usd)
+// {
+//     int rate = 23500;
+//     return (int)(rate * usd);
+// }
+// Console.WriteLine($"${vnd} VND = ${VndToUsd(vnd)} USD");
 
-static double VndToUsd(int vnd)
-{
-    double rate = 23500;
-    return vnd / rate;
-}
+// static double VndToUsd(int vnd)
+// {
+//     double rate = 23500;
+//     return vnd / rate;
+// }
 
-Console.WriteLine(ReverseWord(word: "snake"));
-static string ReverseWord(string word)
-{
-    string result = "";
-    for (int i = word.Length - 1; i >= 0; i--)
-    {
-        result += word[i];
-    }
-    return result;
-}
+// Console.WriteLine(ReverseWord(word: "snake"));
+// static string ReverseWord(string word)
+// {
+//     string result = "";
+//     for (int i = word.Length - 1; i >= 0; i--)
+//     {
+//         result += word[i];
+//     }
+//     return result;
+// }
 
 
-Console.WriteLine(ReverseSentence(sentence: "there are snakes at the zoo"));
-string ReverseSentence(string sentence)
-{
-    string result = "";
-    string[] words = sentence.Split(" ");
+// Console.WriteLine(ReverseSentence(sentence: "there are snakes at the zoo"));
+// string ReverseSentence(string sentence)
+// {
+//     string result = "";
+//     string[] words = sentence.Split(" ");
 
-    foreach (string word in words)
-    {
-        result += ReverseWord(word: word) + " ";
-    }
-    return result.Trim();
-}
+//     foreach (string word in words)
+//     {
+//         result += ReverseWord(word: word) + " ";
+//     }
+//     return result.Trim();
+// }
 
 
 // RETURN BOOL FROM METHODS
@@ -2165,51 +2165,51 @@ string ReverseSentence(string sentence)
 //     Console.WriteLine($"Change found at Positions {result[0]} and {result[1]}");
 // }
 
-int target = 30;
-int[] coins = new int[] {5, 5, 50, 25, 25, 10, 5};
-int[,] result = TwoCoins(coins, target);
+// int target = 30;
+// int[] coins = new int[] { 5, 5, 50, 25, 25, 10, 5 };
+// int[,] result = TwoCoins(coins, target);
 
-if (result.Length == 0) 
-{
-    Console.WriteLine("No two coins make change");
-} 
-else 
-{
-    Console.WriteLine("Change found at positions:");
-    for (int i = 0; i < result.GetLength(0); i++) 
-    {
-        if (result[i,0] == -1) 
-        {
-            break;
-        }
-        Console.WriteLine($"{result[i,0]},{result[i,1]}");
-    }
-}
-int[,] TwoCoins(int[] coins, int target)
-{
-    int[,] result = { { -1, -1 }, { -1, -1 }, { -1, -1 }, { -1, -1 }, { -1, -1 } };
-    int count = 0;
+// if (result.Length == 0)
+// {
+//     Console.WriteLine("No two coins make change");
+// }
+// else
+// {
+//     Console.WriteLine("Change found at positions:");
+//     for (int i = 0; i < result.GetLength(0); i++)
+//     {
+//         if (result[i, 0] == -1)
+//         {
+//             break;
+//         }
+//         Console.WriteLine($"{result[i, 0]},{result[i, 1]}");
+//     }
+// }
+// int[,] TwoCoins(int[] coins, int target)
+// {
+//     int[,] result = { { -1, -1 }, { -1, -1 }, { -1, -1 }, { -1, -1 }, { -1, -1 } };
+//     int count = 0;
 
-    for (int curr = 0; curr < coins.Length; curr++)
-    {
-        for (int next = curr + 1; next < coins.Length; next++)
-        {
-            if (coins[curr] + coins[next] == target)
-            {
-                result[count, 0] = curr;
-                result[count, 1] = next;
-                count++;
-            }
-            if (count == result.GetLength(0)) 
-            {
-                return result;
-            }
-            
-        }
-    }
-    return (count == 0) ? new int[0,0] : result;
+//     for (int curr = 0; curr < coins.Length; curr++)
+//     {
+//         for (int next = curr + 1; next < coins.Length; next++)
+//         {
+//             if (coins[curr] + coins[next] == target)
+//             {
+//                 result[count, 0] = curr;
+//                 result[count, 1] = next;
+//                 count++;
+//             }
+//             if (count == result.GetLength(0))
+//             {
+//                 return result;
+//             }
 
-}
+//         }
+//     }
+//     return (count == 0) ? new int[0, 0] : result;
+
+// }
 
 // game challenge
 // Random random = new Random();
@@ -2291,8 +2291,36 @@ int[,] TwoCoins(int[] coins, int target)
 // }
 
 
+string[] pettingZoo =
+[
+    "alpacas", "capybaras", "chickens", "ducks", "emus", "geese",
+    "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws",
+    "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
+];
+
+RandomizeAnimals();
+// string[,] group = AssignGroup();
+Console.WriteLine("School A");
+// PrintGroup(group);
 
 
+void RandomizeAnimals()
+{
+    Random random = new();
+
+    for (int i = 0; i < pettingZoo.Length; i++)
+    {
+        int range = random.Next(i, pettingZoo.Length);
+
+        string temp = pettingZoo[i];
+        pettingZoo[i] = pettingZoo[range];
+        pettingZoo[range] = temp;
+        // (pettingZoo[r], pettingZoo[i]) = (pettingZoo[i], pettingZoo[r]); //tupples to swap values
+    }
+}
+foreach(string animal in pettingZoo){
+    Console.WriteLine(animal);
+}
 
 
 
