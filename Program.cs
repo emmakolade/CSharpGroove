@@ -2291,65 +2291,112 @@ of profgramming languge resources
 // }
 
 
-string[] pettingZoo =
-[
-    "alpacas", "capybaras", "chickens", "ducks", "emus", "geese",
-    "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws",
-    "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
-];
+// string[] pettingZoo =
+// [
+//     "alpacas", "capybaras", "chickens", "ducks", "emus", "geese",
+//     "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws",
+//     "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
+// ];
 
-PlanSchoolVisit("School A");
-PlanSchoolVisit("School B", 3);
-PlanSchoolVisit("School C", 2);
+// PlanSchoolVisit("School A");
+// PlanSchoolVisit("School B", 3);
+// PlanSchoolVisit("School C", 2);
 
-void PlanSchoolVisit(string schoolName, int groups = 6)
-{
-    RandomizeAnimals();
-    string[,] group1 = AssignGroup(groups);
-    Console.WriteLine(schoolName);
-    PrintGroup(group1);
-}
+// void PlanSchoolVisit(string schoolName, int groups = 6)
+// {
+//     RandomizeAnimals();
+//     string[,] group1 = AssignGroup(groups);
+//     Console.WriteLine(schoolName);
+//     PrintGroup(group1);
+// }
 
-void RandomizeAnimals()
-{
-    Random random = new();
+// void RandomizeAnimals()
+// {
+//     Random random = new();
 
-    for (int i = 0; i < pettingZoo.Length; i++)
-    {
-        int r = random.Next(i, pettingZoo.Length);
+//     for (int i = 0; i < pettingZoo.Length; i++)
+//     {
+//         int r = random.Next(i, pettingZoo.Length);
 
-        string temp = pettingZoo[r];
-        pettingZoo[r] = pettingZoo[i];
-        pettingZoo[i] = temp;
-        // (pettingZoo[r], pettingZoo[i]) = (pettingZoo[i], pettingZoo[r]); //tupples to swap values
-    }
-}
+//         string temp = pettingZoo[r];
+//         pettingZoo[r] = pettingZoo[i];
+//         pettingZoo[i] = temp;
+//         // (pettingZoo[r], pettingZoo[i]) = (pettingZoo[i], pettingZoo[r]); //tupples to swap values
+//     }
+// }
 
-string[,] AssignGroup(int groups = 6)
-{
-    string[,] result = new string[groups, pettingZoo.Length / groups];
-    int start = 0;
+// string[,] AssignGroup(int groups = 6)
+// {
+//     string[,] result = new string[groups, pettingZoo.Length / groups];
+//     int start = 0;
 
-    for (int i = 0; i < groups; i++)
-    {
-        for (int j = 0; j < result.GetLength(1); j++)
-        {
-            result[i, j] = pettingZoo[start++];
-        }
-    }
+//     for (int i = 0; i < groups; i++)
+//     {
+//         for (int j = 0; j < result.GetLength(1); j++)
+//         {
+//             result[i, j] = pettingZoo[start++];
+//         }
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-void PrintGroup(string[,] groups)
-{
-    for (int i = 0; i < groups.GetLength(0); i++)
-    {
-        Console.Write($"Group {i + 1}: ");
-        for (int j = 0; j < groups.GetLength(1); j++)
-        {
-            Console.Write($"{groups[i, j]}  ");
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintGroup(string[,] groups)
+// {
+//     for (int i = 0; i < groups.GetLength(0); i++)
+//     {
+//         Console.Write($"Group {i + 1}: ");
+//         for (int j = 0; j < groups.GetLength(1); j++)
+//         {
+//             Console.Write($"{groups[i, j]}  ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+
+/* 
+This code uses a names array and corresponding methods to display
+greeting messages
+*/
+
+// string[] names = new string[] { "Sophia", "Andrew", "AllGreetings" };
+
+// string messageText = "";
+
+// foreach (string name in names)
+// {
+//     if (name == "Sophia")
+//         messageText = SophiaMessage();
+//     else if (name == "Andrew")
+//         messageText = AndrewMessage();
+//     else if (name == "AllGreetings")
+//         messageText = SophiaMessage();
+//         messageText = messageText + "\n\r" + AndrewMessage();
+
+//     Console.WriteLine(messageText + "\n\r");
+// }
+
+// bool pauseCode = true;
+// while (pauseCode == true);
+
+// static string SophiaMessage()
+// {
+//     return "Hello, my name is Sophia.";
+// }
+
+// static string AndrewMessage()
+// {
+//     return "Hi, my name is Andrew. Good to meet you.";
+// }
+
+// TRY CATCH
+double float1 = 3000.0;
+double float2 = 0.0;
+int number1 = 3000;
+int number2 = 0;
+
+Console.WriteLine(float1 / float2);
+Console.WriteLine(number1 / number2);
+Console.WriteLine("Exit program");
