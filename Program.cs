@@ -2392,37 +2392,124 @@ greeting messages
 // }
 
 // TRY CATCH
-try
-{
-    Process1();
-}
-catch
-{
-    Console.WriteLine("An exception has occurred");
-}
+// try
+// {
+//     Process1();
+// }
+// catch
+// {
+//     Console.WriteLine("An exception has occurred");
+// }
 
-Console.WriteLine("Exit program");
+// Console.WriteLine("Exit program");
 
-static void Process1()
+// static void Process1()
+// {
+//     try
+//     {
+//         WriteMessage();
+//     }
+//     catch(Exception ex)
+//     {
+//         Console.WriteLine($"Exception caught in Process1:{ex.Message}");
+//     }
+
+// }
+
+// static void WriteMessage()
+// {
+//     double float1 = 3000.0;
+//     double float2 = 0.0;
+//     int number1 = 3000;
+//     int number2 = 0;
+
+//     Console.WriteLine(float1 / float2);
+//     Console.WriteLine(number1 / number2);
+// }
+// checked
+// {
+//     try
+//     {
+//         int num1 = int.MaxValue;
+//         int num2 = int.MaxValue;
+//         int result = num1 + num2;
+//         Console.WriteLine("Result: " + result);
+//     }
+//     catch (OverflowException ex)
+//     {
+//         Console.WriteLine("Error: The number is too large to be represented as an integer. " + ex.Message);
+//     }
+// }
+
+// try
+// {
+//     string? str = null;
+//     int length = str.Length;
+//     Console.WriteLine("String Length: " + length);
+// }
+// catch (NullReferenceException ex)
+// {
+//     Console.WriteLine("Error: The reference is null. " + ex.Message);
+// }
+
+// try
+// {
+//     int[] numbers = new int[5];
+//     numbers[5] = 10;
+//     Console.WriteLine("Number at index 5: " + numbers[5]);
+// }
+// catch (IndexOutOfRangeException ex)
+// {
+//     Console.WriteLine("Error: Index out of range. " + ex.Message);
+// }
+
+// try
+// {
+//     int num3 = 10;
+//     int num4 = 0;
+//     int result2 = num3 / num4;
+//     Console.WriteLine("Result: " + result2);
+// }
+// catch (DivideByZeroException ex)
+// {
+//     Console.WriteLine("Error: Cannot divide by zero. " + ex.Message);
+// }
+
+// Console.WriteLine("Exiting program.");
+
+
+
+
+string[][] userEnteredValues =
+[
+    ["1", "two", "3"],
+    ["0", "1", "2"]
+];
+foreach (string[] userEntries in userEnteredValues)
 {
-    try
-    {
-        WriteMessage();
+    try{
+        BusinessProcess1(userEntries);
     }
-    catch(Exception ex)
-    {
-        Console.WriteLine($"Exception caught in Process1:{ex.Message}");
+    catch(Exception ex){
+        if(ex.StackTrace.Contains("BusinessProcess1") && (ex is FormatException)){
+            Console.WriteLine(ex.Message);
+        }
     }
-
 }
 
-static void WriteMessage()
-{
-    double float1 = 3000.0;
-    double float2 = 0.0;
-    int number1 = 3000;
-    int number2 = 0;
-
-    Console.WriteLine(float1 / float2);
-    Console.WriteLine(number1 / number2);
+void BusinessProcess1(string[] userEntries){
+    int valueEntered;
+    foreach(string userValue in userEntries)
+    {
+        try
+        {
+            valueEntered = int.Parse(userValue);
+        }
+        catch (FormatException)
+        {
+            
+            FormatException invalidFormatException = new("FormatException: User input values in 'BusinessProcess1' must be valid integers");
+            throw invalidFormatException;
+        }
+    }
 }
